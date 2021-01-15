@@ -1,0 +1,11 @@
+<h1>Log In to Stock Tracker</h1>
+
+<%= form_for @user do |f| %>
+    <%= f.label :username %>
+    <%= f.text_field :username %><br>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %><br>
+    <br>
+    <%= f.submit %>
+<% end %>

@@ -1,6 +1,10 @@
 class SessionsController < ApplicationController
 
-    def login
+    def new #log in page
+        @user = User.new
+    end
+
+    def create #login user
     end
 
     def logout
