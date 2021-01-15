@@ -1,21 +1,26 @@
 class WatchlistsController < ApplicationController
 
-    def index 
+    def index #takes in current user and pulls up all his watchlists
     end
 
-    def new 
+    def new
+        @watchlist = Watchlist.new
     end
 
-    def create 
+    def create
+        @watchlist = Watchlist.new
     end
 
     def show 
+        @watchlist = Watchlist.find(params[:id])
     end
 
-    def edit 
+    def edit
+        @watchlist = Watchlist.find(params[:id])
     end
 
-    def update 
+    def update
+        @watchlist = Watchlist.find(params[:id])
     end
 
     def delete 
