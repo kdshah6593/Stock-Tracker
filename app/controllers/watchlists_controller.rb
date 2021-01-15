@@ -8,7 +8,10 @@ class WatchlistsController < ApplicationController
     end
 
     def create
-        @watchlist = Watchlist.new
+        @watchlist = Watchlist.new(params.require(:watchlist).permit(:title))
+        @watchlist.user = current_user
+        @watchlist.save
+        redirect_to watchlist_path(@watchlist)
     end
 
     def show 
