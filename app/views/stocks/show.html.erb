@@ -4,4 +4,12 @@
 
 <% response = HTTParty.get("https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=#{@stock.symbol}&apikey=#{ENV["STOCK_API_KEY"]}") %>
 
-<%= response["Global Quote"]["05. price"] %>
+<p>Current Price: <%= response["Global Quote"]["05. price"] %></p>
+<p>Today's High: <%= response["Global Quote"]["03. high"] %></p>
+<p>Today's Low: <%= response["Global Quote"]["04. low"] %></p>
+<p>Today's Open: <%= response["Global Quote"]["02. open"] %></p>
+<p>Yesterday's Close: <%= response["Global Quote"]["08. previous close"] %></p>
+<p>Percent Change: <%= response["Global Quote"]["10. change percent"] %></p>
+
+
+
