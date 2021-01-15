@@ -1,0 +1,7 @@
+<h1>My Watchlists</h1>
+
+<div>
+    <% @user.watchlists.each do |watchlist| %>
+        <%= link_to watchlist.title, watchlist_path(watchlist) %>
+    <% end %>
+</div>
