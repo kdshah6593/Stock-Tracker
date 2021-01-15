@@ -2,3 +2,6 @@
 <h3>Symbol: <%= @stock.symbol %></h3>
 <h3>Sector: <%= @stock.sector %></h3>
 
+<% response = HTTParty.get("https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=#{@stock.symbol}&apikey=#{ENV["STOCK_API_KEY"]}") %>
+
+<%= response["Global Quote"]["05. price"] %>
