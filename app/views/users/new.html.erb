@@ -1,0 +1,21 @@
+<h1>Sign Up for Stock Tracker </h1>
+<h3>Fill out all the information below to get started</h3>
+
+<%= form_for @user do |f| %>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %><br>
+
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %><br>
+
+    <%= f.label :username %>
+    <%= f.text_field :username %><br>
+
+    <%= f.label :password %>
+    <%= f.text_field :password %><br>
+
+    <%= f.label :email %>
+    <%= f.text_field :email %><br>
+    <br>
+    <%= f.submit %>
+<% end %>
