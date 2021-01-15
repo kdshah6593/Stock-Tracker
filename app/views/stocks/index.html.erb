@@ -1,0 +1,16 @@
+<h1>S&P 500 Stock List</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Symbol</th>
+        <th>Sector</th>
+    </tr>
+    <% @stocks.each do |stock| %>
+        <tr>
+            <td><%= stock.name %></td>
+            <td><%= stock.symbol %></td>
+            <td><%= stock.sector %></td>
+        </tr>
+    <% end %>
+</table>
