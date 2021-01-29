@@ -7,6 +7,11 @@ Rails.application.routes.draw do
   resources :users do
     resources :portfolios
   end
+
+  #watchlists
+  resources :users do
+    resources :watchlists
+  end
   
   # resources
   #  :portfolios
