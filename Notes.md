@@ -91,20 +91,20 @@ User can keep track of their portfolios and create stock watchlists
 - [x] GET /users/:user_id/portfolios/new #new
 - [x] GET /users/:user_id/portfolios/:id/edit #edit
 
-- GET && POST /users/watchlists #index #create
-- GET && PATCH && DELETE /users/:user_id/watchlists/:id #show #update #delete
-- GET /users/:user_id/watchlists/new #new
-- GET /users/:user_id/watchlists/:id/edit #edit
+- [x] GET && POST /users/:user_id/watchlists #index #create
+- [x] GET && PATCH && DELETE /users/:user_id/watchlists/:id #show #update #delete
+- [x] GET /users/:user_id/watchlists/new #new
+- [x] GET /users/:user_id/watchlists/:id/edit #edit
 
-- GET /stocks #index
-- GET /stocks/:id #show
+- [x] GET /stocks #index
+- [x] GET /stocks/:id #show
 
-- GET /portfolios/:portfolio_id/stock_purchases/new #new
-- POST /portfolios/:portfolio_id/stock_purchases #create
-- DELETE /portfolios/:portfolio_id/stock_purchases/:id #delete
+- [x] GET /portfolios/:portfolio_id/stock_purchases/new #new
+- [x] POST /portfolios/:portfolio_id/stock_purchases #create
+- [x] DELETE /portfolios/:portfolio_id/stock_purchases/:id #delete
 
-- GET /watchlists/:watchlist_id/stocks/new AS: add_stock #new
-- POST /watchlists/:watchlist_id/stocks #create
+- [x] GET /watchlists/:watchlist_id/stocks/new AS: add_stock #new
+- [x] POST /watchlists/:watchlist_id/stocks #create
 
 
 # Helpers
