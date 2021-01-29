@@ -75,10 +75,10 @@ User can keep track of their portfolios and create stock watchlists
         - [x] [] New: Form to add stock to watchlist (relabel these in routes.rb)
         - [x] [] Create: add stock to watchlist (relabel these in routes.rb)
 5. StockPurchase
-    - [] [] New: form to purchase/add stock to portfolio
-    - [] [] Create: create a stock purchase andd add to portfolio
+    - [x] [] New: form to purchase/add stock to portfolio
+    - [x] [] Create: create a stock purchase andd add to portfolio
     - [] [] Edit/Update: MAYBE
-    - [] [] Delete: remove a stock purchase
+    - [x] [] Delete: remove a stock purchase
 
 # Routes
 - [x] POST /users #create
