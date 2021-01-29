@@ -27,7 +27,7 @@ class WatchlistsController < ApplicationController
         @watchlist = Watchlist.find(params[:id])
     end
 
-    def delete 
+    def destroy 
     end
 
 end
