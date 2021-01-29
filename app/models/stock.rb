@@ -1,3 +1,4 @@
 class Stock < ApplicationRecord
-    has_and_belongs_to_many :watchlists
+    has_many :stock_watchlists
+    has_many :watchlists, through: :stock_watchlists
 end
