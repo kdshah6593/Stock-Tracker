@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   #users
   resources :users, except: [:index, :new, :show]
-  get '/signup', to: "users#new", as: "signup"
+  get '/users/new', to: "users#new", as: "signup"
 
   #portfolios & watchlists
   resources :users, only: [:show] do
