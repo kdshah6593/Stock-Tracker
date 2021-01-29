@@ -1,15 +1,20 @@
 class SessionsController < ApplicationController
 
-    def new #log in page
+    def new #form for login page
         @user = User.new
     end
 
     def create #login user
-        @user = User.find_by(username: params[:user][:username])
-        session[:user_id] = @user.index
-        redirect_to watchlists_path
+        if @user = User.find_by(username: params[:user][:username])
+            session[:user_id] = @user.id
+            redirect_to user_path(@user)
+        else
+            render :new
+        end
     end
 
-    def logout
+    def destroy
+        session.delete(:user_id)
+        redirect_to root_path
     end
 end
