@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   resources :users do
     resources :watchlists
   end
+
+  #stocks
+  resources :stocks, only: [:index, :show]
   
   # resources
   #  :portfolios
