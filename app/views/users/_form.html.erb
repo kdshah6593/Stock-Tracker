@@ -1,19 +1,25 @@
-<%= f.label :first_name %>
-<%= f.text_field :first_name %><br>
-
-<%= f.label :last_name %>
-<%= f.text_field :last_name %><br>
-
-<%= f.label :username %>
-<%= f.text_field :username %><br>
-
-<%= f.label :password %>
-<% if @user.password.nil? %>
-    <%= f.text_field :password %><br>
-<% else %>
-    <%= f.password_field :password %><br>
-<% end %>
-
-<%= f.label :email %>
-<%= f.text_field :email %><br>
-<br>
+<div class="field_with_errors">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %><br>
+</div>
+<div class="field_with_errors">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %><br>
+</div>
+<div class="field_with_errors">
+    <%= f.label :username %>
+    <%= f.text_field :username %><br>
+</div>
+<div class="field_with_errors">
+    <%= f.label :password %>
+    <% if @user.password.nil? %>
+        <%= f.text_field :password %><br>
+    <% else %>
+        <%= f.password_field :password %><br>
+    <% end %>
+</div>
+<div class="field_with_errors">
+    <%= f.label :email %>
+    <%= f.text_field :email %><br>
+    <br>
+</div>
