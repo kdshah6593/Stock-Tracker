@@ -1,22 +1,19 @@
-<%= form_for user do |f| %>
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name %><br>
+<%= f.label :first_name %>
+<%= f.text_field :first_name %><br>
 
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name %><br>
+<%= f.label :last_name %>
+<%= f.text_field :last_name %><br>
 
-    <%= f.label :username %>
-    <%= f.text_field :username %><br>
+<%= f.label :username %>
+<%= f.text_field :username %><br>
 
-    <%= f.label :password %>
-    <% if user.password.nil? %>
-        <%= f.text_field :password %><br>
-    <% else %>
-        <%= f.password_field :password %><br>
-    <% end %>
-
-    <%= f.label :email %>
-    <%= f.text_field :email %><br>
-    <br>
-    <%= f.submit %>
+<%= f.label :password %>
+<% if @user.password.nil? %>
+    <%= f.text_field :password %><br>
+<% else %>
+    <%= f.password_field :password %><br>
 <% end %>
+
+<%= f.label :email %>
+<%= f.text_field :email %><br>
+<br>

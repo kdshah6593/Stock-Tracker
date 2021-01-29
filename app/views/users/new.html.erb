@@ -1,4 +1,10 @@
 <h1>Sign Up for Stock Tracker </h1>
 <h3>Fill out all the information below to get started</h3>
 
-<%= render partial: "form", locals: {user: @user} %>
+<%= form_for @user do |f| %>
+    <%= render partial: "form", locals: {f: f }%>
+    <%= f.submit "Sign Up" %>
+<% end %>
+
+
+
