@@ -25,13 +25,13 @@ User can keep track of their portfolios and create stock watchlists
 - [x] stock_purchases (amount (integer), cost per stock (float), portfolio_id, stock_id)
 
 # Controllers
-- User -> Sign Up, Edit User Information
-- Portfolio -> Edit
-- Watchlist -> New watchlist, Edit watchlist, Index of watchlists
-- Sessions -> Log In and Log out
-- Stocks -> Index of Stocks, Show page of stocks
+- [x] User -> Sign Up, Edit User Information
+- [x] Portfolio -> Edit
+- [x] Watchlist -> New watchlist, Edit watchlist, Index of watchlists
+- [x] Sessions -> Log In and Log out
+- [x] Stocks -> Index of Stocks, Show page of stocks
 - ?Static -> maybe for home page
-- Application - for helper methods or stuff
+- [x] Application - for helper methods or stuff, could do static#home instead here
 
 # Views
 - User -> user show page will show links to watchlist index and portfolio index, total value of portfolios, add watchlist or add portfolio links; do a user profile page (can see details of user with edit link)
