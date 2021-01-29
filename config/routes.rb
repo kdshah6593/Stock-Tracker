@@ -15,6 +15,11 @@ Rails.application.routes.draw do
 
   #stocks
   resources :stocks, only: [:index, :show]
+
+  #stock_purchases
+  resources :portfolios do
+    resources :stock_purchases, only: [:new, :create, :delete]
+  end
   
   # resources
   #  :portfolios
