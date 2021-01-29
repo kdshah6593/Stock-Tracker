@@ -9,4 +9,24 @@ class UsersController < ApplicationController
         @user.save
         redirect_to watchlists_path
     end
+
+    def show
+
+    end
+
+    def edit
+
+    end
+
+    def update
+
+    end
+
+    def destroy
+
+    end
+
+    def profile #need to create a route for this still
+
+    end
 end
