@@ -8,7 +8,7 @@
     <% end %>
 <% end %>
 
-<%= form_for @user do |f| %>
+<%= form_for(@user, url: session_path) do |f| %>
     <%= f.label :username %>
     <%= f.text_field :username %><br>
 
