@@ -69,11 +69,11 @@ User can keep track of their portfolios and create stock watchlists
     - Additional Routes
         - [x] [] Profile: shows profile with user info details
 4. Stock
-    - [] [] Index: see list of all stocks
-    - [] [] Show: see individual stock
+    - [x] [] Index: see list of all stocks
+    - [x] [] Show: see individual stock
     - No conventional New/Create/Edit/Update/Delete 
-        - [] [] New: Form to add stock to watchlist (relabel these in routes.rb)
-        - [] [] Create: add stock to watchlist (relabel these in routes.rb)
+        - [x] [] New: Form to add stock to watchlist (relabel these in routes.rb)
+        - [x] [] Create: add stock to watchlist (relabel these in routes.rb)
 5. StockPurchase
     - [] [] New: form to purchase/add stock to portfolio
     - [] [] Create: create a stock purchase andd add to portfolio
