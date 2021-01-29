@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_29_001330) do
+ActiveRecord::Schema.define(version: 2021_01_29_001717) do
+
+  create_table "portfolios", force: :cascade do |t|
+    t.string "title"
+    t.string "type"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "stock_purchases", force: :cascade do |t|
     t.integer "amount"
