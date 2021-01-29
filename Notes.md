@@ -44,13 +44,13 @@ User can keep track of their portfolios and create stock watchlists
     - or only nest portfolio index and show under Users
     - only nest watchlist index and show under Users
 1. Watchlist
-    - Index: see list of all watchlists
-    - Show: see individual watchlist
-    - New: form for new watchlist
-    - Create: add new watchlist
-    - Edit: form for editing watchlist
-    - Update: update watchlist
-    - Delete: delete watchlist
+    - [x] Index: see list of all watchlists
+    - [x] Show: see individual watchlist
+    - [x] New: form for new watchlist
+    - [x] Create: add new watchlist
+    - [x] Edit: form for editing watchlist
+    - [x] Update: update watchlist
+    - [x] Delete: delete watchlist
 2. Portfolio
     - Index: see list of all portfolios
     - Show: see individual portfolio
