@@ -4,25 +4,25 @@
 User can keep track of their portfolios and create stock watchlists
 
 # Models
-- User (name, username, email, password)
-- Portfolio (title, type of portfolio(roth, brokerage, 401k))
-- Watchlist (title, description?)
-- Stocks (name, symbol, price) - this will be seeded by API; will not be manually creating any stocks
+- [x] User (name, username, email, password)
+- [x] Portfolio (title, type of portfolio(roth, brokerage, 401k))
+- [x] Watchlist (title, description?)
+- [x] Stock (name, symbol, price) - this will be seeded by API; will not be manually creating any stocks
 
 # Associations
-- User has many portfolios
-- User has many watchlists 
+- [x] User has many portfolios
+- [x] User has many watchlists 
 - User has many stocks through portfolio ??????
-- Portfolio has many stocks through stock_purchases
-- Portfolio belongs to User
-- Watchlist has many stocks through watchlist_stocks
-- Watchlist belongs to User
-- Stock has many portfolios through stock_purchases
-- Stock has many watchlists through watchlist_stocks
+- [x] Portfolio has many stocks through stock_purchases
+- [x] Portfolio belongs to User
+- [x] Watchlist has many stocks through watchlist_stocks
+- [x] Watchlist belongs to User
+- [x] Stock has many portfolios through stock_purchases
+- [x] Stock has many watchlists through watchlist_stocks
 
 # Join Tables (one needs to take user attribute)
-- watchlist_stocks (watchlist_id, stock_id)
-- stock_purchases (amount (integer), cost per stock (float), portfolio_id, stock_id)
+- [x] stock_watchlists (watchlist_id, stock_id)
+- [x] stock_purchases (amount (integer), cost per stock (float), portfolio_id, stock_id)
 
 # Controllers
 - User -> Sign Up, Edit User Information
