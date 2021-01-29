@@ -1,0 +1,2 @@
+module StockPurchasesHelper
+end

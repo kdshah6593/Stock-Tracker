@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :stock_purchases
   resources :stocks, only: [:index, :show]
   resources :watchlists
   resources :users, only: [:create]
