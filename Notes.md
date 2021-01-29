@@ -60,14 +60,14 @@ User can keep track of their portfolios and create stock watchlists
     - [x] [] Update: update portfolio
     - [x] [] Delete: delete portfolio
 3. User
-    - [] [] New: form to sign up new user
-    - [] [] Create: sign up new user
-    - [] [] Show: user home page with portfolio and watchlist info
-    - [] [] Edit: form for editing user info
-    - [] [] Update: update user info
-    - [] [] Delete: delete user from system (add a check of are you sure?)
+    - [x] [] New: form to sign up new user
+    - [x] [] Create: sign up new user
+    - [x] [] Show: user home page with portfolio and watchlist info
+    - [x] [] Edit: form for editing user info
+    - [x] [] Update: update user info
+    - [x] [] Delete: delete user from system (add a check of are you sure?)
     - Additional Routes
-        - [] [] Profile: shows profile with user info details
+        - [x] [] Profile: shows profile with user info details
 4. Stock
     - [] [] Index: see list of all stocks
     - [] [] Show: see individual stock
