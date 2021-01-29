@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   #stock_purchases
   resources :stock_purchases, only: [:new, :create, :destroy], path: 'portfolios/:portfolio_id'
 
-  # get 'login', to: 'sessions#new'
-  # post 'login', to: 'sessions#create'
-  # get 'logout', to: 'sessions#logout'
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
 end
