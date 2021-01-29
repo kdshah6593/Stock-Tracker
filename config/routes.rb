@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  
+  root "static#home"
+
   #users
   resources :users, except: [:index, :new, :show]
   get '/users/new', to: "users#new", as: "signup"
@@ -17,8 +20,6 @@ Rails.application.routes.draw do
 
   #stock_purchases
   resources :stock_purchases, only: [:new, :create, :destroy], path: 'portfolios/:portfolio_id'
-
-  # get 'signup', to: 'users#new'
 
   # get 'login', to: 'sessions#new'
   # post 'login', to: 'sessions#create'
