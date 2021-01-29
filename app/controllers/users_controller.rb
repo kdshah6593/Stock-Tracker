@@ -10,7 +10,6 @@ class UsersController < ApplicationController
             session[:user_id] = @user.id
             redirect_to user_path(@user)
         else
-            #NEED TO add @user here so we can use error messaging, which needs to be added to new page
             render :new
         end
     end
@@ -20,19 +19,19 @@ class UsersController < ApplicationController
     end
 
     def edit
-
+        @user = User.find_by(id: params[:id])
     end
 
     def update
-
+        @user = User.find_by(id: params[:id])
     end
 
     def destroy
-
+        @user = User.find_by(id: params[:id])
     end
 
     def profile #need to create a route for this still
-
+        # assign user using current user here
     end
 
     private
