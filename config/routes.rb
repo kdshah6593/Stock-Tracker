@@ -1,15 +1,11 @@
 Rails.application.routes.draw do
   #users
-  resources :users, except: [:index, :new]
+  resources :users, except: [:index, :new, :show]
   get '/signup', to: "users#new", as: "signup"
 
-  #portfolios
-  resources :users do
+  #portfolios & watchlists
+  resources :users, only: [:show] do
     resources :portfolios
-  end
-
-  #watchlists
-  resources :users do
     resources :watchlists
   end
 
