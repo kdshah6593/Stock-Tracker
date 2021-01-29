@@ -1,13 +1,22 @@
 Rails.application.routes.draw do
-  resources :portfolios
-  resources :stock_purchases
-  resources :stocks, only: [:index, :show]
-  resources :watchlists
-  resources :users, only: [:create]
-  get 'signup', to: 'users#new'
+  #users
+  resources :users, except: [:index, :new]
+  get '/signup', to: "users#new", as: "signup"
 
-  get 'login', to: 'sessions#new'
-  post 'login', to: 'sessions#create'
-  get 'logout', to: 'sessions#logout'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  #portfolios
+  resources :users do
+    resources :portfolios
+  end
+  
+  # resources
+  #  :portfolios
+  # resources :stock_purchases
+  # resources :stocks, only: [:index, :show]
+  # resources :watchlists
+
+  # get 'signup', to: 'users#new'
+
+  # get 'login', to: 'sessions#new'
+  # post 'login', to: 'sessions#create'
+  # get 'logout', to: 'sessions#logout'
 end
