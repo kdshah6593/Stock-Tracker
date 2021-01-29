@@ -15,6 +15,11 @@ Rails.application.routes.draw do
 
   #stocks
   resources :stocks, only: [:index, :show]
+  resources :watchlists do
+    resources :stocks, only: [:new, :create]
+  end
+  # get '/watchlists/:watchlist_id/stocks/new', to: 'stocks#new', as: 'add_stock'
+  # post '/watchlists/:watchlist_id/stocks', to: 'stocks#create', as: ''
 
   #stock_purchases
   resources :portfolios do
