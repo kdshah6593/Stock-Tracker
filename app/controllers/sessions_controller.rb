@@ -10,7 +10,6 @@ class SessionsController < ApplicationController
             redirect_to user_path(@user)
         else
             flash[:message] = "Invalid Username/Password Combination"
-            # @user = User.new
             redirect_to login_path
         end
     end
