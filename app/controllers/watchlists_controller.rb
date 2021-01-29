@@ -17,15 +17,15 @@ class WatchlistsController < ApplicationController
     end
 
     def show 
-        @watchlist = Watchlist.find(params[:id])
+        @watchlist = Watchlist.find_by(params[:id])
     end
 
     def edit
-        @watchlist = Watchlist.find(params[:id])
+        @watchlist = Watchlist.find_by(params[:id])
     end
 
     def update
-        @watchlist = Watchlist.find(params[:id])
+        @watchlist = Watchlist.find_by(params[:id])
     end
 
     def destroy 
