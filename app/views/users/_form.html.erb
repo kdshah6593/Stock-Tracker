@@ -9,7 +9,11 @@
     <%= f.text_field :username %><br>
 
     <%= f.label :password %>
-    <%= f.password_field :password %><br>
+    <% if user.password.nil? %>
+        <%= f.text_field :password %><br>
+    <% else %>
+        <%= f.password_field :password %><br>
+    <% end %>
 
     <%= f.label :email %>
     <%= f.text_field :email %><br>
