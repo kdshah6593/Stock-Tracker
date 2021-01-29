@@ -7,11 +7,11 @@ class UsersController < ApplicationController
     def create
         @user = User.new(params.require(:user).permit(:first_name, :last_name, :username, :password, :email))
         @user.save
-        redirect_to watchlists_path
+        redirect_to user_path(@user)
     end
 
     def show
-
+        @user = User.find_by(id: params[:id])
     end
 
     def edit
