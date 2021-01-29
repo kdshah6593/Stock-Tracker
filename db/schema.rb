@@ -29,17 +29,19 @@ ActiveRecord::Schema.define(version: 2021_01_29_001717) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "stock_watchlists", force: :cascade do |t|
+    t.integer "stock_id"
+    t.integer "watchlist_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "stocks", force: :cascade do |t|
     t.string "name"
     t.string "sector"
     t.string "symbol"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "stocks_watchlists", id: false, force: :cascade do |t|
-    t.integer "watchlist_id", null: false
-    t.integer "stock_id", null: false
   end
 
   create_table "users", force: :cascade do |t|
