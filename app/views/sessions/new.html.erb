@@ -1,11 +1,9 @@
 <h1>Log In to Stock Tracker</h1>
 
-<% if @user.errors.any? %>
-    <% @user.errors.each do |error| %>
-        <div>
-            <%= error.full_message %><br><br>
-        </div>
-    <% end %>
+<% if flash[:message] %>
+    <div>
+        <%= flash[:message] %>
+    </div>
 <% end %>
 
 <%= form_for(@user, url: session_path) do |f| %>
