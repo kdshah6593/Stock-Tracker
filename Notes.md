@@ -44,41 +44,41 @@ User can keep track of their portfolios and create stock watchlists
     - or only nest portfolio index and show under Users
     - only nest watchlist index and show under Users
 1. Watchlist
-    - [x] Index: see list of all watchlists
-    - [x] Show: see individual watchlist
-    - [x] New: form for new watchlist
-    - [x] Create: add new watchlist
-    - [x] Edit: form for editing watchlist
-    - [x] Update: update watchlist
-    - [x] Delete: delete watchlist
+    - [x] [] Index: see list of all watchlists
+    - [x] [] Show: see individual watchlist
+    - [x] [] New: form for new watchlist
+    - [x] [] Create: add new watchlist
+    - [x] [] Edit: form for editing watchlist
+    - [x] [] Update: update watchlist
+    - [x] [] Delete: delete watchlist
 2. Portfolio
-    - Index: see list of all portfolios
-    - Show: see individual portfolio
-    - New: form for new portfolio
-    - Create: add new portfolio
-    - Edit: form for editing portfolio
-    - Update: update portfolio
-    - Delete: delete portfolio
+    - [x] [] Index: see list of all portfolios
+    - [x] [] Show: see individual portfolio
+    - [x] [] New: form for new portfolio
+    - [x] [] Create: add new portfolio
+    - [x] [] Edit: form for editing portfolio
+    - [x] [] Update: update portfolio
+    - [x] [] Delete: delete portfolio
 3. User
-    - New: form to sign up new user
-    - Create: sign up new user
-    - Show: user home page with portfolio and watchlist info
-    - Edit: form for editing user info
-    - Update: update user info
-    - Delete: delete user from system (add a check of are you sure?)
+    - [] [] New: form to sign up new user
+    - [] [] Create: sign up new user
+    - [] [] Show: user home page with portfolio and watchlist info
+    - [] [] Edit: form for editing user info
+    - [] [] Update: update user info
+    - [] [] Delete: delete user from system (add a check of are you sure?)
     - Additional Routes
-        - Profile: shows profile with user info details
+        - [] [] Profile: shows profile with user info details
 4. Stock
-    - Index: see list of all stocks
-    - Show: see individual stock
+    - [] [] Index: see list of all stocks
+    - [] [] Show: see individual stock
     - No conventional New/Create/Edit/Update/Delete 
-        - New: Form to add stock to watchlist (relabel these in routes.rb)
-        - Create: add stock to watchlist (relabel these in routes.rb)
+        - [] [] New: Form to add stock to watchlist (relabel these in routes.rb)
+        - [] [] Create: add stock to watchlist (relabel these in routes.rb)
 5. StockPurchase
-    - New: form to purchase/add stock to portfolio
-    - Create: create a stock purchase andd add to portfolio
-    - Edit/Update: MAYBE
-    - Delete: remove a stock purchase
+    - [] [] New: form to purchase/add stock to portfolio
+    - [] [] Create: create a stock purchase andd add to portfolio
+    - [] [] Edit/Update: MAYBE
+    - [] [] Delete: remove a stock purchase
 
 # Routes
 - [x] POST /users #create
