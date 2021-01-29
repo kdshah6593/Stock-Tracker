@@ -1,0 +1,7 @@
+<h1><%= @user.first_name %>'s Portfolios</h1>
+
+<% @portfolios.each do |portfolio| %>
+    <div>
+        <%= link_to portfolio.title, user_portfolio_path(@user, portfolio)  %>
+    </div>
+<% end %>
