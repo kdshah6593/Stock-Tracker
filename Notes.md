@@ -87,7 +87,7 @@ User can keep track of their portfolios and create stock watchlists
 - [x] GET /users/:id/edit #edit
 
 - [x] GET && POST /users/:user_id/portfolios #index #create
-- GET && PATCH && DELETE /users/:user_id/portfolios/:id #show #update #delete
+- [x] GET && PATCH && DELETE /users/:user_id/portfolios/:id #show #update #delete
 - [x] GET /users/:user_id/portfolios/new #new
 - [x] GET /users/:user_id/portfolios/:id/edit #edit
 
