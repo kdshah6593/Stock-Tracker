@@ -13,7 +13,7 @@ class PortfoliosController < ApplicationController
     end
 
     def show
-
+        @portfolio = Portfolio.find_by(id: params[:id])
     end
 
     def edit 
