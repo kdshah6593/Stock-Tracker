@@ -154,3 +154,15 @@ User can keep track of their portfolios and create stock watchlists
 
 # Future features
 - Add a CASH attribute to Users - Stock purchases would then subtract from CASH value and user can add more cash to their account
+
+
+
+# Next Steps
+1. Create Navbar
+2. User Signout
+3. Add before_action so only logged in user can do actions in site
+4. New WatchList Form
+5. New Portfolio Form
+6. Validations for Watchlist and Portfolio
+7. Stock Purchase Form
+8. Add Stock Form in Watchlist Show page
