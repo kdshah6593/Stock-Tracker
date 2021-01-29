@@ -10,7 +10,7 @@ class WatchlistsController < ApplicationController
     end
 
     def create
-        @watchlist = Watchlist.new(params.require(:watchlist).permit(:title))
+        @watchlist = Watchlist.new(watchlist_params)
         @watchlist.user = current_user
         @watchlist.save
         redirect_to watchlist_path(@watchlist)
@@ -29,6 +29,11 @@ class WatchlistsController < ApplicationController
     end
 
     def destroy 
+    end
+
+    private
+    def watchlist_params
+        params.require(:watchlist).permit(:title)
     end
 
 end
