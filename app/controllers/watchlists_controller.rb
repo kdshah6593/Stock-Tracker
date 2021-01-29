@@ -2,6 +2,7 @@ class WatchlistsController < ApplicationController
 
     def index #takes in current user and pulls up all his watchlists
         @user = current_user
+        @watchlists = @user.watchlists
     end
 
     def new
