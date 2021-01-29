@@ -83,13 +83,13 @@ User can keep track of their portfolios and create stock watchlists
 # Routes
 - [x] POST /users #create
 - [x] GET && PATCH && DELETE /users/:id #show #update #delete
-- GET /users/new AS: signup #new
+- [x] GET /users/new AS: signup #new
 - [x] GET /users/:id/edit #edit
 
-- GET && POST /users/portfolios #index #create
+- [x] GET && POST /users/:user_id/portfolios #index #create
 - GET && PATCH && DELETE /users/:user_id/portfolios/:id #show #update #delete
-- GET /users/:user_id/portfolios/new #new
-- GET /users/:user_id/portfolios/:id/edit #edit
+- [x] GET /users/:user_id/portfolios/new #new
+- [x] GET /users/:user_id/portfolios/:id/edit #edit
 
 - GET && POST /users/watchlists #index #create
 - GET && PATCH && DELETE /users/:user_id/watchlists/:id #show #update #delete
