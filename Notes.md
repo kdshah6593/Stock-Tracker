@@ -81,10 +81,10 @@ User can keep track of their portfolios and create stock watchlists
     - Delete: remove a stock purchase
 
 # Routes
-- POST /users #create
-- GET && PATCH && DELETE /users/:id #show #update #delete
+- [x] POST /users #create
+- [x] GET && PATCH && DELETE /users/:id #show #update #delete
 - GET /users/new AS: signup #new
-- GET /users/:id/edit #edit
+- [x] GET /users/:id/edit #edit
 
 - GET && POST /users/portfolios #index #create
 - GET && PATCH && DELETE /users/:user_id/portfolios/:id #show #update #delete
