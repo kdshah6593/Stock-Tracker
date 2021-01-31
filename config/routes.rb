@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   post '/watchlists/:watchlist_id/stocks', to: 'stocks#create', as: 'submit_stock'
 
   #stock_purchases
-  resources :stock_purchases, only: [:new, :create, :destroy], path: 'portfolios/:portfolio_id'
+  resources :stock_purchases, only: [:new, :create, :destroy], path: 'portfolios/:portfolio_id/stockpurchases'
 
   get '/login', to: 'sessions#new'
   post '/session', to: 'sessions#create', as: 'session'
