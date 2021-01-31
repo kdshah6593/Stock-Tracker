@@ -44,20 +44,20 @@ User can keep track of their portfolios and create stock watchlists
     - or only nest portfolio index and show under Users
     - only nest watchlist index and show under Users
 1. Watchlist
-    - [x] [] Index: see list of all watchlists
-    - [x] [] Show: see individual watchlist
-    - [x] [] New: form for new watchlist
-    - [x] [] Create: add new watchlist
-    - [x] [] Edit: form for editing watchlist
-    - [x] [] Update: update watchlist
+    - [x] [x] Index: see list of all watchlists
+    - [x] [x] Show: see individual watchlist
+    - [x] [x] New: form for new watchlist
+    - [x] [x] Create: add new watchlist
+    - [x] [x] Edit: form for editing watchlist
+    - [x] [x] Update: update watchlist
     - [x] [] Delete: delete watchlist
 2. Portfolio
     - [x] [x] Index: see list of all portfolios
-    - [x] [] Show: see individual portfolio
-    - [x] [] New: form for new portfolio
-    - [x] [] Create: add new portfolio
-    - [x] [] Edit: form for editing portfolio
-    - [x] [] Update: update portfolio
+    - [x] [x] Show: see individual portfolio
+    - [x] [x] New: form for new portfolio
+    - [x] [x] Create: add new portfolio
+    - [x] [x] Edit: form for editing portfolio
+    - [x] [x] Update: update portfolio
     - [x] [] Delete: delete portfolio
 3. User
     - [x] [x] New: form to sign up new user
@@ -161,8 +161,8 @@ User can keep track of their portfolios and create stock watchlists
 1. Create Navbar x
 2. User Signout x
 3. Add before_action so only logged in user can do actions in site x
-4. New WatchList Form
-5. New Portfolio Form
+4. New WatchList Form x
+5. New Portfolio Form x
 6. Validations for Watchlist and Portfolio
 7. Stock Purchase Form
 8. Add Stock Form in Watchlist Show page
