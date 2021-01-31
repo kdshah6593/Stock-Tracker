@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+    skip_before_action :verified_user, except: [:destroy]
 
     def new #form for login page
         @user = User.new
