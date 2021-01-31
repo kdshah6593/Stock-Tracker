@@ -158,12 +158,7 @@ User can keep track of their portfolios and create stock watchlists
 
 
 # Next Steps
-1. Create Navbar x
-2. User Signout x
-3. Add before_action so only logged in user can do actions in site x
-4. New WatchList Form x
-5. New Portfolio Form x
-6. Validations for Watchlist and Portfolio x
-7. Stock Purchase Form x
-8. Add Stock Form in Watchlist Show page
-9. Need to add checks so another user cannot change anything for a different user
+1. Add Stock Form in Watchlist Show page
+2. Need to add checks so another user cannot change anything for a different user
+3. Set up Profile Route, View, Editing User Info, Updating User Info, Deleting User
+4. CSS
