@@ -52,7 +52,7 @@ User can keep track of their portfolios and create stock watchlists
     - [x] [] Update: update watchlist
     - [x] [] Delete: delete watchlist
 2. Portfolio
-    - [x] [] Index: see list of all portfolios
+    - [x] [x] Index: see list of all portfolios
     - [x] [] Show: see individual portfolio
     - [x] [] New: form for new portfolio
     - [x] [] Create: add new portfolio
@@ -60,17 +60,17 @@ User can keep track of their portfolios and create stock watchlists
     - [x] [] Update: update portfolio
     - [x] [] Delete: delete portfolio
 3. User
-    - [x] [] New: form to sign up new user
-    - [x] [] Create: sign up new user
-    - [x] [] Show: user home page with portfolio and watchlist info
+    - [x] [x] New: form to sign up new user
+    - [x] [x] Create: sign up new user
+    - [x] [x] Show: user home page with portfolio and watchlist info
     - [x] [] Edit: form for editing user info
     - [x] [] Update: update user info
     - [x] [] Delete: delete user from system (add a check of are you sure?)
     - Additional Routes
         - [x] [] Profile: shows profile with user info details
 4. Stock
-    - [x] [] Index: see list of all stocks
-    - [x] [] Show: see individual stock
+    - [x] [x] Index: see list of all stocks
+    - [x] [x] Show: see individual stock
     - No conventional New/Create/Edit/Update/Delete 
         - [x] [] New: Form to add stock to watchlist (relabel these in routes.rb)
         - [x] [] Create: add stock to watchlist (relabel these in routes.rb)
@@ -158,9 +158,9 @@ User can keep track of their portfolios and create stock watchlists
 
 
 # Next Steps
-1. Create Navbar
-2. User Signout
-3. Add before_action so only logged in user can do actions in site
+1. Create Navbar x
+2. User Signout x
+3. Add before_action so only logged in user can do actions in site x
 4. New WatchList Form
 5. New Portfolio Form
 6. Validations for Watchlist and Portfolio
