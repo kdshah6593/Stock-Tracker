@@ -1,0 +1,14 @@
+<%= f.label :title %>
+<%= f.text_field :title %><br>
+
+<%= f.radio_button :portfolio_type, "Brokerage" %>
+<%= f.label :portfolio_type_brokerage, "Brokerage" %>
+<%= f.radio_button :portfolio_type, "Traditional IRA" %>
+<%= f.label :portfolio_type_traditional_ira, "Traditional IRA" %>
+<%= f.radio_button :portfolio_type, "Roth IRA" %>
+<%= f.label :portfolio_type_roth_ira, "Roth IRA" %>
+<%= f.radio_button :portfolio_type, "401K" %>
+<%= f.label :portfolio_type_401k, "401K" %>
+
+<br><br>
+<%= f.submit %>

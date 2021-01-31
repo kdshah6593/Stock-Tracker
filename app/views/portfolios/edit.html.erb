@@ -1,0 +1,5 @@
+<h1>Edit Portfolio</h1>
+
+<%= form_for(@portfolio, url: user_portfolio_path(current_user, @portfolio)) do |f| %>
+    <% render partial: "form", locals: {f: f}%>
+<% end %>
