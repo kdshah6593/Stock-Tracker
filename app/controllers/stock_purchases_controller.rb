@@ -16,7 +16,9 @@ class StockPurchasesController < ApplicationController
     end
 
     def destroy
-        
+        @stock_purchase = StockPurchase.find_by(id: params[:id])
+        @stock_purchase.destroy
+        redirect_to user_portfolio_path(current_user, @stock_purchase.portfolio)
     end
 
     private
