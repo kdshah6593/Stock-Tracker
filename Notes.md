@@ -126,8 +126,8 @@ User can keep track of their portfolios and create stock watchlists
 - [x] Portfolio types can be radio buttons
 - [x] Nest Portfolio and Watchlists under User
 - OmniAuth: google 
-- use validations for form fields --> remeber this gives you access to .errors on the model
-- use partials for forms
+- [x] use validations for form fields --> remember this gives you access to .errors on the model
+- [x] use partials for forms
 - use before_action / skip_before_action
 - need a changing navbar or sidebar
 - only a user can change their own watchlists/portfolios
@@ -136,7 +136,7 @@ User can keep track of their portfolios and create stock watchlists
     - also consider using search feature & collection select to create the drop down list to add to watchlist
     - in the form it may need to use watchlist_stock model instead of using stock model but we could use stock RESTful routes
     - then in the controller action we want to redirect to watchlist show page
-- for any .save? checks, in the else statement, use render so then error can be seen
+- [x] for any .save? checks, in the else statement, use render so then error can be seen
 
 
 # Flow
@@ -161,4 +161,7 @@ User can keep track of their portfolios and create stock watchlists
 1. Add Stock Form in Watchlist Show page
 2. Need to add checks so another user cannot change anything for a different user
 3. Set up Profile Route, View, Editing User Info, Updating User Info, Deleting User
-4. CSS
+4. Search Stocks Feature
+5. Organize Watchlist stocks, Organize Portfolio stocks
+6. OmniAuth
+7. CSS
