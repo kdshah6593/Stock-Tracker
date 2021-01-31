@@ -1,5 +1,5 @@
 <h1><%= @portfolio.title %></h1>
-<h3><%= @portfolio.portfolio_type %></h3>
+<h3><%= @portfolio.portfolio_type %> Account</h3>
 
 <table>
     <tr>
@@ -14,10 +14,11 @@
             <td><%= stock_purchase.amount %></td>
             <td><%= stock_purchase.amount * stock_purchase.cost %>
             <td><%= stock_purchase.cost %></td>
+            <td><%= button_to "Remove Purchase", stock_purchase_path(@portfolio, stock_purchase), method: :delete %>
         </tr>
     <% end %>
 </table>
 
-
+<br><br>
 <%= link_to "Add Stock", new_stock_purchase_path(@portfolio) %>
 <%= link_to "Edit Portfolio", edit_user_portfolio_path(current_user, @portfolio) %>
