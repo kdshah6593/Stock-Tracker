@@ -6,14 +6,14 @@ class WatchlistsController < ApplicationController
     end
 
     def new
-        @watchlist = Watchlist.new
+        @watchlist = current_user.watchlists.build
     end
 
     def create
         @watchlist = Watchlist.new(watchlist_params)
         @watchlist.user = current_user
         @watchlist.save
-        redirect_to watchlist_path(@watchlist)
+        redirect_to user_watchlist_path(current_user, @watchlist)
     end
 
     def show 
@@ -26,6 +26,8 @@ class WatchlistsController < ApplicationController
 
     def update
         @watchlist = Watchlist.find_by(params[:id])
+        @watchlist.update(watchlist_params)
+        redirect_to user_watchlist_path(current_user, @watchlist)
     end
 
     def destroy 

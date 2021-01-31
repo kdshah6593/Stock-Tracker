@@ -1,8 +1,5 @@
 <h1>Edit Watchlist</h1>
 
-<%= form_for(@watchlist) do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title %><br>
-    <br>
-    <%= f.submit %>
+<%= form_for(@watchlist, url: user_watchlist_path(current_user, @watchlist)) do |f| %>
+    <% render partial: "form", locals: {f: f}%>
 <% end %>
