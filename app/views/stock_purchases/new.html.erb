@@ -1,8 +1,16 @@
 <h1>Stock Purchase</h1>
 <h3>Enter information for a stock you recently bought</h3>
 
+<% if @stock_purchase.errors.any? %>
+    <% @stock_purchase.errors.each do |error| %>
+        <div>
+            <%= error.full_message %><br><br>
+        </div>
+    <% end %>
+<% end %>
+
 <%= form_for @stock_purchase do |f| %>
-    <%= f.hidden_field :portfolio %>
+    <%= f.hidden_field :portfolio_id  %>
 
     <%= f.label :stock, "Stock Purchased" %>
     <%= f.collection_select(:stock_id, Stock.all, :id, :name, {include_blank: 'Select a stock'}) %><br><br>
