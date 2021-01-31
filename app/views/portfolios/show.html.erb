@@ -1,6 +1,23 @@
 <h1><%= @portfolio.title %></h1>
 <h3><%= @portfolio.portfolio_type %></h3>
 
+<table>
+    <tr>
+        <th>Stock</th>
+        <th>Quantity</th>
+        <th>Total Cost</th>
+        <th>Cost Per Unit</th>
+    </tr>
+    <% @portfolio.stock_purchases.each do |stock_purchase| %>
+        <tr>
+            <td><%= stock_purchase.stock.name %></td>
+            <td><%= stock_purchase.amount %></td>
+            <td><%= stock_purchase.amount * stock_purchase.cost %>
+            <td><%= stock_purchase.cost %></td>
+        </tr>
+    <% end %>
+</table>
+
 
 <%= link_to "Add Stock", new_stock_purchase_path(@portfolio) %>
 <%= link_to "Edit Portfolio", edit_user_portfolio_path(current_user, @portfolio) %>
