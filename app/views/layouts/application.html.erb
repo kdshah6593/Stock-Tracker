@@ -11,6 +11,23 @@
   </head>
 
   <body>
+    <nav>
+      <% if logged_in? %>
+      <ul>
+        <li><%= link_to "Home", user_path(current_user) %></li>
+        <li><%= link_to "Stocks", stocks_path %></li>
+        <li><%= link_to "Portfolios", user_portfolios_path(current_user) %></li>
+        <li><%= link_to "Watchlists", user_watchlists_path(current_user) %></li>
+        <li><%= link_to "Profile", "#" %></li>
+        <li><%= link_to "Log Out", logout_path %></li>
+      </ul>
+      <% else %>
+      <ul>
+        <li><%= link_to "Sign Up", signup_path %></li>
+        <li><%= link_to "Login", login_path %></li>
+      </ul>
+      <% end %>
+    </nav>
     <%= yield %>
   </body>
 </html>
