@@ -10,10 +10,12 @@ class WatchlistsController < ApplicationController
     end
 
     def create
-        @watchlist = Watchlist.new(watchlist_params)
-        @watchlist.user = current_user
-        @watchlist.save
-        redirect_to user_watchlist_path(current_user, @watchlist)
+        @watchlist = current_user.watchlists.build(watchlist_params)
+        if @watchlist.save
+            redirect_to user_watchlist_path(current_user, @watchlist)
+        else
+            render :new
+        end
     end
 
     def show 
