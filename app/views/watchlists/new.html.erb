@@ -1,12 +1,8 @@
 <h1>New Watchlist</h1>
 
-<% if @watchlist.errors.any? %>
-    <% @watchlist.errors.each do |error| %>
-        <div>
-            <%= error.full_message %><br><br>
-        </div>
-    <% end %>
-<% end %>
+<% display_form_errors(@watchlist).each do |error| %>
+    <%= error %><br><br>
+<%end %>
 
 <%= form_for(@watchlist, url: user_watchlists_path(current_user)) do |f| %>
     <% render partial: "form", locals: {f: f}%>
