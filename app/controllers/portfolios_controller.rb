@@ -10,8 +10,11 @@ class PortfoliosController < ApplicationController
 
     def create
         @portfolio = current_user.portfolios.build(portfolios_params)
-        @portfolio.save
-        redirect_to user_portfolio_path(current_user, @portfolio)
+        if @portfolio.save
+            redirect_to user_portfolio_path(current_user, @portfolio)
+        else
+            render :new
+        end
     end
 
     def show
