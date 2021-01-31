@@ -10,7 +10,8 @@ module ApplicationHelper
 
     def display_errors(y)
         form_errors(y).each do |error|
-            content_tag(:p, error)
+            tag.div tag.p(error)
+            tag.br
         end
     end
 end
