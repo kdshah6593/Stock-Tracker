@@ -1,0 +1,14 @@
+<%= form_for stock_purchase do |f| %>
+    <%= f.hidden_field :portfolio_id  %>
+
+    <%= f.label :stock, "Stock Purchased" %>
+    <%= f.collection_select(:stock_id, Stock.all, :id, :name, {include_blank: 'Select a stock'}) %><br><br>
+    
+    <%= f.label :amount, "Quantity Purchased" %>
+    <%= f.number_field :amount, step: 1 %><br><br>
+
+    <%= f.label :cost, "Cost Per Unit" %>
+    <%= f.number_field :cost, step: 0.01 %><br><br>
+
+    <%= f.submit "Add Stock to Portfolio" %>
+<% end %>
