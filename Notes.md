@@ -75,10 +75,10 @@ User can keep track of their portfolios and create stock watchlists
         - [x] [] New: Form to add stock to watchlist (relabel these in routes.rb)
         - [x] [] Create: add stock to watchlist (relabel these in routes.rb)
 5. StockPurchase
-    - [x] [] New: form to purchase/add stock to portfolio
-    - [x] [] Create: create a stock purchase andd add to portfolio
+    - [x] [x] New: form to purchase/add stock to portfolio
+    - [x] [x] Create: create a stock purchase andd add to portfolio
     - [] [] Edit/Update: MAYBE
-    - [x] [] Delete: remove a stock purchase
+    - [x] [x] Delete: remove a stock purchase
 
 # Routes
 - [x] POST /users #create
@@ -108,7 +108,7 @@ User can keep track of their portfolios and create stock watchlists
 
 
 # Helpers
-- current_user, verified_user? authenticated ==> these will go in application controller
+- [x] current_user, verified_user? authenticated ==> these will go in application controller
 - View Helpers go in the helpers directory, these return snippets of HTML code; helps clean up views
 
 # Portfolio View Page
@@ -122,9 +122,9 @@ User can keep track of their portfolios and create stock watchlists
 - can add a SEARCH feature here
 
 # Random Thoughts
-- Check tables so numbers are float or integer as needed
+- [x] Check tables so numbers are float or integer as needed
 - [x] Portfolio types can be radio buttons
-- Nest Portfolio and Watchlists under User
+- [x] Nest Portfolio and Watchlists under User
 - OmniAuth: google 
 - use validations for form fields --> remeber this gives you access to .errors on the model
 - use partials for forms
@@ -164,5 +164,6 @@ User can keep track of their portfolios and create stock watchlists
 4. New WatchList Form x
 5. New Portfolio Form x
 6. Validations for Watchlist and Portfolio x
-7. Stock Purchase Form
+7. Stock Purchase Form x
 8. Add Stock Form in Watchlist Show page
+9. Need to add checks so another user cannot change anything for a different user
