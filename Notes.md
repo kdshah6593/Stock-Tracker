@@ -123,7 +123,7 @@ User can keep track of their portfolios and create stock watchlists
 
 # Random Thoughts
 - Check tables so numbers are float or integer as needed
-- Portfolio types can be radio buttons
+- [x] Portfolio types can be radio buttons
 - Nest Portfolio and Watchlists under User
 - OmniAuth: google 
 - use validations for form fields --> remeber this gives you access to .errors on the model
@@ -163,6 +163,6 @@ User can keep track of their portfolios and create stock watchlists
 3. Add before_action so only logged in user can do actions in site x
 4. New WatchList Form x
 5. New Portfolio Form x
-6. Validations for Watchlist and Portfolio
+6. Validations for Watchlist and Portfolio x
 7. Stock Purchase Form
 8. Add Stock Form in Watchlist Show page
