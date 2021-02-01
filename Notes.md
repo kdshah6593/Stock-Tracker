@@ -158,8 +158,8 @@ User can keep track of their portfolios and create stock watchlists
 
 
 # Next Steps
-1. Add Stock Form in Watchlist Show page
-2. Need to add checks so another user cannot change anything for a different user
+1. Add Stock Form in Watchlist Show page x
+2. Need to add checks so another user cannot change anything for a different user x
 3. Set up Profile Route, View, Editing User Info, Updating User Info, Deleting User
 4. Search Stocks Feature
 5. Organize Watchlist stocks, Organize Portfolio stocks
