@@ -5,7 +5,7 @@ class StocksController < ApplicationController
     end
 
     def show 
-        @stock = Stock.find(params[:id])
+        @stock = Stock.find_by(id: params[:id])
     end
 
     def new #this is form to add a stock to watchlist
