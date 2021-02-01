@@ -9,10 +9,9 @@
     <% end %>
 <% end %>
 
-<%= form_for @user do |f| %>
-    <%= render partial: "form", locals: {f: f }%>
-    <%= f.submit "Sign Up" %>
-<% end %>
+
+<%= render partial: "form", locals: {user: @user }%>
+
 
 
 
