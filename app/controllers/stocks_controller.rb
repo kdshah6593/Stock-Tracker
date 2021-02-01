@@ -12,8 +12,13 @@ class StocksController < ApplicationController
     end
 
     def create #this is to add a stock to watchlist
-        raise params.inspect
-        @stock_watchlist = StockWatchlist.new()
+        @stock_watchlist = StockWatchlist.new(stock_watchlist_params)
+        if @stock_watchlist.save
+            redirect_to user_watchlist_path(current_user, @stock_watchlist.watchlist)
+        else
+            @watchlist = @stock_watchlist.watchlist
+            render :'/watchlists/show'
+        end
     end
 
 
