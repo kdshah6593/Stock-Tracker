@@ -1,6 +1,3 @@
 <h1>Edit User Details </h1>
 
-<%= form_for @user do |f| %>
-    <%= render partial: "form", locals: {f: f }%>
-    <%= f.submit "Update" %>
-<% end %>
+<%= render partial: "edit_form", locals: {user: @user}%>

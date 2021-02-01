@@ -1,0 +1,22 @@
+<%= form_for user do |f| %>
+    <div class="field_with_errors">
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name %><br>
+    </div>
+    <div class="field_with_errors">
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name %><br>
+    </div>
+    <div class="field_with_errors">
+        <%= f.label :email %>
+        <%= f.text_field :email %><br>
+        <br>
+    </div>
+    <div class="field_with_errors">
+        <%= f.hidden_field :username %>
+    </div>
+    <div class="field_with_errors">
+        <%= f.hidden_field :password, :value => user.password_digest %>
+    </div>
+    <%= f.submit "Update" %>
+<% end %>
