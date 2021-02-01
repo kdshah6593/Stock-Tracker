@@ -33,7 +33,10 @@ class WatchlistsController < ApplicationController
         redirect_to user_watchlist_path(current_user, @watchlist)
     end
 
-    def destroy 
+    def destroy
+        @watchlist = Watchlist.find_by(id: params[:id])
+        @watchlist.delete
+        redirect_to user_watchlists_path(current_user)
     end
 
     private

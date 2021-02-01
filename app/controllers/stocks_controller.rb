@@ -13,6 +13,6 @@ class StocksController < ApplicationController
     end
 
     def create #this is to add a stock to watchlist
-
+        
     end
 end

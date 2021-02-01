@@ -16,6 +16,7 @@
 </table>
 
 <%= link_to "Edit Watchlist", edit_user_watchlist_path(current_user, @watchlist) %>
+<%= button_to "Delete Watchlist", user_watchlist_path(current_user, @watchlist), method: :delete %>
 
 <%= form_for @stock_watchlist, url: add_stock_path(@watchlist) do |f| %>
     <%= f.label :stock, "Add a New Stock" %>
