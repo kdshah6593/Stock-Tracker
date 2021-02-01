@@ -18,4 +18,4 @@
 </table>
 
 <%= link_to "Edit Watchlist", edit_user_watchlist_path(current_user, @watchlist) %>
-<%= link_to "Delete Watchlist", user_watchlist_path(current_user, @watchlist), method: :delete %>
+<%= link_to "Delete Watchlist", user_watchlist_path(current_user, @watchlist), method: :delete, data: {confirm: "Are you sure you want to delete this watchlist? "} %>
