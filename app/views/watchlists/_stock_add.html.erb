@@ -1,0 +1,6 @@
+<%= form_for stock_watchlist, url: submit_stock_path(watchlist) do |f| %>
+    <%= f.hidden_field :watchlist_id %>
+    <%= f.label :stock, "Add a New Stock" %>
+    <%= f.collection_select(:stock_id, Stock.all, :id, :name, {include_blank: 'Select a Stock'})%>
+    <%= f.submit "Add" %>
+<% end %>
