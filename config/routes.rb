@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show] do
     resources :portfolios
     resources :watchlists
+    get '/profile', to: "users#profile"
   end
 
   #stocks
@@ -21,6 +22,7 @@ Rails.application.routes.draw do
   #stock_purchases
   resources :stock_purchases, only: [:new, :create, :destroy], path: 'portfolios/:portfolio_id/stockpurchases'
 
+  #login/logout
   get '/login', to: 'sessions#new'
   post '/session', to: 'sessions#create', as: 'session'
   delete '/session', to: 'sessions#destroy', as: 'logout'
