@@ -12,11 +12,6 @@
         <%= f.text_field :email %><br>
         <br>
     </div>
-    <div class="field_with_errors">
-        <%= f.hidden_field :username %>
-    </div>
-    <div class="field_with_errors">
-        <%= f.hidden_field :password, :value => user.password_digest %>
-    </div>
+
     <%= f.submit "Update" %>
 <% end %>
