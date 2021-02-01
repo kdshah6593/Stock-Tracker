@@ -6,7 +6,7 @@ class WatchlistsController < ApplicationController
     end
 
     def new
-        @watchlist = current_user.watchlists.build
+        @watchlist = Watchlist.new
     end
 
     def create
