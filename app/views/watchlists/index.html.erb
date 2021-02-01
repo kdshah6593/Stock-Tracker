@@ -1,5 +1,7 @@
 <h1><%= @user.first_name %>'s Watchlists</h1>
 
+<p><%= link_to "Add a New Watchlist", new_user_watchlist_path(@user) %></p>
+
 <% @user.watchlists.each do |watchlist| %>
     <div>
         <%= link_to watchlist.title, user_watchlist_path(@user, watchlist) %>
