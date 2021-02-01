@@ -63,17 +63,17 @@ User can keep track of their portfolios and create stock watchlists
     - [x] [x] New: form to sign up new user
     - [x] [x] Create: sign up new user
     - [x] [x] Show: user home page with portfolio and watchlist info
-    - [x] [] Edit: form for editing user info
-    - [x] [] Update: update user info
-    - [x] [] Delete: delete user from system (add a check of are you sure?)
+    - [x] [x] Edit: form for editing user info
+    - [x] [x] Update: update user info
+    - [x] [x] Delete: delete user from system (add a check of are you sure?)
     - Additional Routes
-        - [x] [] Profile: shows profile with user info details
+        - [x] [x] Profile: shows profile with user info details
 4. Stock
     - [x] [x] Index: see list of all stocks
     - [x] [x] Show: see individual stock
     - No conventional New/Create/Edit/Update/Delete 
-        - [x] [] New: Form to add stock to watchlist (relabel these in routes.rb)
-        - [x] [] Create: add stock to watchlist (relabel these in routes.rb)
+        - [x] [x] New: Form to add stock to watchlist (relabel these in routes.rb)
+        - [x] [x] Create: add stock to watchlist (relabel these in routes.rb)
 5. StockPurchase
     - [x] [x] New: form to purchase/add stock to portfolio
     - [x] [x] Create: create a stock purchase andd add to portfolio
@@ -128,9 +128,9 @@ User can keep track of their portfolios and create stock watchlists
 - OmniAuth: google 
 - [x] use validations for form fields --> remember this gives you access to .errors on the model
 - [x] use partials for forms
-- use before_action / skip_before_action
+- [x] use before_action / skip_before_action
 - need a changing navbar or sidebar
-- only a user can change their own watchlists/portfolios
+- [x] only a user can change their own watchlists/portfolios
 - need to figure out another way push stocks onto the watchlist model other than using <<
 - instead of a separate form, can add new stock to watchlist inside watchlist show page using built in form in views page
     - also consider using search feature & collection select to create the drop down list to add to watchlist
@@ -160,7 +160,8 @@ User can keep track of their portfolios and create stock watchlists
 # Next Steps
 1. Add Stock Form in Watchlist Show page x
 2. Need to add checks so another user cannot change anything for a different user x
-3. Set up Profile Route, View, Editing User Info, Updating User Info, Deleting User
+3. Set up Profile Route, View, Editing User Info, Updating User Info, Deleting User x
+- check if user is actually wanting to delete
 4. Search Stocks Feature
 5. Organize Watchlist stocks, Organize Portfolio stocks
 6. OmniAuth
