@@ -2,14 +2,12 @@
 <h3>Symbol: <%= @stock.symbol %></h3>
 <h3>Sector: <%= @stock.sector %></h3>
 
-<% response = HTTParty.get("https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=#{@stock.symbol}&apikey=#{ENV["STOCK_API_KEY"]}") %>
-
-<p>Current Price: <%= response["Global Quote"]["05. price"] %></p>
-<p>Today's High: <%= response["Global Quote"]["03. high"] %></p>
-<p>Today's Low: <%= response["Global Quote"]["04. low"] %></p>
-<p>Today's Open: <%= response["Global Quote"]["02. open"] %></p>
-<p>Yesterday's Close: <%= response["Global Quote"]["08. previous close"] %></p>
-<p>Percent Change: <%= response["Global Quote"]["10. change percent"] %></p>
-
-
-
+<% @stock.stock_info %>
+<% begin %>
+    <p>Current Price: <%= @stock.stock_price %></p>
+    <p>Today's Open: <%= @stock.stock_open %></p> </p>
+    <p>Yesterday's Close: <%= @stock.stock_close %></p> </p>
+    <p>Percent Change: <%= @stock.stock_percent_change %></p>
+<% rescue NoMethodError %>
+    <h2>Too Many Requests, please try again in 1 minute</h2>
+<% end %>
