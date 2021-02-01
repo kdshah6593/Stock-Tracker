@@ -22,3 +22,4 @@
 <br><br>
 <%= link_to "Add Stock", new_stock_purchase_path(@portfolio) %>
 <%= link_to "Edit Portfolio", edit_user_portfolio_path(current_user, @portfolio) %>
+<%= link_to "Delete Portfolio", user_portfolio_path(current_user, @portfolio), method: :delete, data: {confirm: "Are you sure you want to delete this portfolio? "} %>
