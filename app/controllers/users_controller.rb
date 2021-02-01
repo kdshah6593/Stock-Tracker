@@ -31,8 +31,8 @@ class UsersController < ApplicationController
         @user = User.find_by(id: params[:id])
     end
 
-    def profile #need to create a route for this still
-        # assign user using current user here
+    def profile
+        @user = current_user
     end
 
     private

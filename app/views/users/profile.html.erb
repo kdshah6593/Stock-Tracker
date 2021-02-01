@@ -1,0 +1,13 @@
+<h1><%= @user.username %> Profile Page</h1>
+
+<p>First Name: <%= @user.first_name %></p>
+<p>Last Name: <%= @user.last_name %></p>
+<p>Email: <%= @user.email %></p>
+
+<p>Number of Portfolios: </p>
+<p>Number of Watchlists: </p>
+
+
+
+<p><%= link_to "Edit Profile", edit_user(@user) %>
+<p><%= button_to "Delete Account", user_path(@user), method: :delete %>
