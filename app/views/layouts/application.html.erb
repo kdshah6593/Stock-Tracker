@@ -19,7 +19,7 @@
         <li><%= link_to "Portfolios", user_portfolios_path(current_user) %></li>
         <li><%= link_to "Watchlists", user_watchlists_path(current_user) %></li>
         <li><%= link_to "Profile", user_profile_path(current_user) %></li>
-        <li><%= button_to "Log Out", logout_path, method: :delete %></li>
+        <li><%= link_to "Log Out", logout_path, method: :delete %></li>
       </ul>
       <% else %>
       <ul>
