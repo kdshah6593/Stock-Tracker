@@ -19,16 +19,16 @@ class WatchlistsController < ApplicationController
     end
 
     def show 
-        @watchlist = Watchlist.find_by(params[:id])
+        @watchlist = Watchlist.find_by(id: params[:id])
         @stock_watchlist = @watchlist.stock_watchlists.build
     end
 
     def edit
-        @watchlist = Watchlist.find_by(params[:id])
+        @watchlist = Watchlist.find_by(id: params[:id])
     end
 
     def update
-        @watchlist = Watchlist.find_by(params[:id])
+        @watchlist = Watchlist.find_by(id: params[:id])
         @watchlist.update(watchlist_params)
         redirect_to user_watchlist_path(current_user, @watchlist)
     end
