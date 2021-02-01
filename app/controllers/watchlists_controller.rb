@@ -20,6 +20,7 @@ class WatchlistsController < ApplicationController
 
     def show 
         @watchlist = Watchlist.find_by(params[:id])
+        @stock_watchlist = @watchlist.stock_watchlists.build
     end
 
     def edit

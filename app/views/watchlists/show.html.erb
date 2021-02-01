@@ -16,3 +16,9 @@
 </table>
 
 <%= link_to "Edit Watchlist", edit_user_watchlist_path(current_user, @watchlist) %>
+
+<%= form_for @stock_watchlist, url: add_stock_path(@watchlist) do |f| %>
+    <%= f.label :stock, "Add a New Stock" %>
+    <%= f.collection_select(:stock_id, Stock.all, :id, :name, {include_blank: 'Select a Stock'})%>
+    <%= f.submit %>
+<% end %>
