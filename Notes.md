@@ -50,7 +50,7 @@ User can keep track of their portfolios and create stock watchlists
     - [x] [x] Create: add new watchlist
     - [x] [x] Edit: form for editing watchlist
     - [x] [x] Update: update watchlist
-    - [x] [] Delete: delete watchlist
+    - [x] [x] Delete: delete watchlist
 2. Portfolio
     - [x] [x] Index: see list of all portfolios
     - [x] [x] Show: see individual portfolio
@@ -58,7 +58,7 @@ User can keep track of their portfolios and create stock watchlists
     - [x] [x] Create: add new portfolio
     - [x] [x] Edit: form for editing portfolio
     - [x] [x] Update: update portfolio
-    - [x] [] Delete: delete portfolio
+    - [x] [x] Delete: delete portfolio
 3. User
     - [x] [x] New: form to sign up new user
     - [x] [x] Create: sign up new user
