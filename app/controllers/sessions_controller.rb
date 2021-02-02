@@ -6,10 +6,6 @@ class SessionsController < ApplicationController
     end
 
     def create #login user
-        if auth
-            
-        end
-        
         @user = User.find_by(username: params[:user][:username])
         if @user && @user.authenticate(params[:user][:password])
             session[:user_id] = @user.id
@@ -18,6 +14,10 @@ class SessionsController < ApplicationController
             flash[:message] = "Invalid Username/Password Combination"
             redirect_to login_path
         end
+    end
+
+    def omniauth #login with 3rd party
+        
     end
 
     def destroy
