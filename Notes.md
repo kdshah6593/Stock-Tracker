@@ -158,8 +158,7 @@ User can keep track of their portfolios and create stock watchlists
 
 
 # Next Steps
-1. Organize Watchlist stocks, Organize Portfolio stocks
-2. OmniAuth
-3. Clean up View's that have to much logic
-4. Clean up controller actions
-5. CSS
+1. Clean up View's that have to much logic
+2. Clean up controller actions
+3. CSS
+4. Organize Watchlist stocks, Organize Portfolio stocks
