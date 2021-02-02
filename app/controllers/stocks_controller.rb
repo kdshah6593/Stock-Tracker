@@ -13,10 +13,15 @@ class StocksController < ApplicationController
 
     def create #this is to add a stock to watchlist
         @stock_watchlist = StockWatchlist.new(stock_watchlist_params)
-        if @stock_watchlist.save
-            redirect_to user_watchlist_path(current_user, @stock_watchlist.watchlist)
+        if @stock_watchlist.watchlist.stocks.size < 5
+            if @stock_watchlist.save
+                redirect_to user_watchlist_path(current_user, @stock_watchlist.watchlist)
+            else
+                @watchlist = @stock_watchlist.watchlist
+                render :'/watchlists/show'
+            end
         else
-            @watchlist = @stock_watchlist.watchlist
+            flash[:message] = "I'm sorry, currently the app limits a watchlist to 5 stocks"
             render :'/watchlists/show'
         end
     end
