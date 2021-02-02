@@ -34,8 +34,7 @@ class StocksController < ApplicationController
     end
 
     def sector
-        @stocks = Stock.sector
-        render :sector
+        @stocks = Stock.sector(params[:sector])
     end
 
     private

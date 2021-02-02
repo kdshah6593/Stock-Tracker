@@ -12,8 +12,16 @@ class Stock < ApplicationRecord
         end
     end
 
-    def self.sector
-        order("sector ASC").order("name ASC")
+    def self.sector(filter)
+        if filter.blank?
+            order("sector ASC").order("name ASC")
+        else
+            where('sector == ?', "#{filter}")
+        end
+    end
+
+    def self.list_of_sectors
+        distinct.pluck(:sector)
     end
 
     # This API limits requests to 5 per minute and 500 per day; need premium membership to accomodate more requests
