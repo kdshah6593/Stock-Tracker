@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   
   root "static#home"
 
+  get '/auth/:provider/callback', to: 'session#create'
+
   #users
   resources :users, except: [:index, :new, :show]
   get '/signup', to: "users#new", as: "signup"
