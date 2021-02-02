@@ -34,4 +34,15 @@ class Stock < ApplicationRecord
         info[:percent_change] = response["Global Quote"]["10. percent change"]
         info
     end
+
+    #This API has only monthly request limits
+    def iex_stock_info
+        info = {}
+        response = HTTParty.get("https://cloud.iexapis.com/stable/stock/#{self.symbol.downcase}/quote?token=#{ENV["IEX_API_KEY"]}")
+        info[:price] = response["latestPrice"].round(2)
+        info[:open] = response["iexOpen"].round(2)
+        info[:close] = response["iexClose"].round(2)
+        info[:percent_change] = (response["changePercent"] * 100).round(2)
+        info
+    end
 end
