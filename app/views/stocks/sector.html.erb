@@ -1,5 +1,7 @@
 <h1>S&P 500 Stock List</h1>
 
+<p><%= link_to "View All Stocks", stocks_path %></p>
+
 <%= form_tag(stocks_sector_path, method: :get) do %>
     <%= label_tag("Filter by Sector: ")%>
     <%= select_tag(:sector, options_for_select(Stock.list_of_sectors), {:include_blank => "Select Sector"}) %>
