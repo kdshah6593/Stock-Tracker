@@ -22,6 +22,7 @@ class StocksController < ApplicationController
             end
         else
             flash[:message] = "I'm sorry, currently the app limits a watchlist to 3 stocks"
+            @watchlist = @stock_watchlist.watchlist
             render :'/watchlists/show'
         end
     end
