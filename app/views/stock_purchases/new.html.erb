@@ -1,12 +1,6 @@
 <h1>Stock Purchase</h1>
 <h3>Enter information for a stock you recently bought</h3>
 
-<% if @stock_purchase.errors.any? %>
-    <% @stock_purchase.errors.each do |error| %>
-        <div>
-            <%= error.full_message %><br><br>
-        </div>
-    <% end %>
-<% end %>
+<%= render partial: "static/error", locals: {model: @stock_purchase } %>
 
 <%= render partial: "form", locals: {stock_purchase: @stock_purchase}%>

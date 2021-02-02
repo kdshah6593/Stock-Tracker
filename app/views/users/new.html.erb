@@ -3,16 +3,9 @@
 
 <p><%= link_to "Login with Github", "/auth/github" %></p>
 
-<% if @user.errors.any? %>
-    <% @user.errors.each do |error| %>
-        <div>
-            <%= error.full_message %><br><br>
-        </div>
-    <% end %>
-<% end %>
+<%= render partial: "static/error", locals: {model: @user } %>
 
-
-<%= render partial: "form", locals: {user: @user }%>
+<%= render partial: "form", locals: {user: @user } %>
 
 
 

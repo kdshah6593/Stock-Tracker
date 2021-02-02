@@ -1,12 +1,6 @@
 <h1>New Portfolio</h1>
 
-<% if @portfolio.errors.any? %>
-    <% @portfolio.errors.each do |error| %>
-        <div>
-            <%= error.full_message %><br><br>
-        </div>
-    <% end %>
-<% end %>
+<%= render partial: "static/error", locals: {model: @portfolio } %>
 
 <%= form_for(@portfolio, url: user_portfolios_path(current_user)) do |f| %>
     <% render partial: "form", locals: {f: f}%>
