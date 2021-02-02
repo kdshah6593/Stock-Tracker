@@ -25,6 +25,9 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'httparty'
 # For ENV
 gem 'dotenv-rails', groups: [:development, :test]
+# OmniAuth & Strategies
+gem 'omniauth'
+gem 'omniauth-google'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
