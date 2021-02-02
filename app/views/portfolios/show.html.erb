@@ -7,25 +7,7 @@
     </div>
 <% end %>
 
-<table>
-    <tr>
-        <th>Stock</th>
-        <th>Quantity</th>
-        <th>Total Cost</th>
-        <th>Cost Per Unit</th>
-        <th>Current Price</th>
-    </tr>
-    <% @portfolio.stock_purchases.each do |stock_purchase| %>
-        <tr>
-            <td><%= stock_purchase.stock.name %></td>
-            <td><%= stock_purchase.amount %></td>
-            <td><%= stock_purchase.amount * stock_purchase.cost %>
-            <td><%= stock_purchase.cost %></td>
-            <td><%= stock_purchase.stock.stock_info[:price] %>
-            <td><%= link_to "Remove Purchase", stock_purchase_path(@portfolio, stock_purchase), method: :delete, data: {confirm: "Are you sure you want remove this purchase?"} %>
-        </tr>
-    <% end %>
-</table>
+<%= render "portfolios/table" %>
 
 <br><br>
 <%= link_to "Add Stock", new_stock_purchase_path(@portfolio) %>
