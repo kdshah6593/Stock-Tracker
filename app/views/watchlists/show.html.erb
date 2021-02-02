@@ -20,7 +20,11 @@
             <td><%= stock.symbol %></td>
             <td><%= stock.sector %></td>
             <% stock.stock_info.each do |key, value| %>
-                <td><%= value %></td>
+                <% if value == nil %>
+                    <td><%= "N/A" %></td>
+                <% else %>
+                    <td><%= value %></td>
+                <% end %>
             <% end %>
         </tr>
     <% end %>
