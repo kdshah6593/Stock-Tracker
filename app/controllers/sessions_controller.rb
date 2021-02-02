@@ -25,7 +25,6 @@ class SessionsController < ApplicationController
             u.last_name = name[1]
             u.password = SecureRandom.hex(16)
         end
-        byebug
         if @user.valid?
             session[:user_id] = @user.id
             redirect_to user_path(@user)

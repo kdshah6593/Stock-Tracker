@@ -1,6 +1,8 @@
 <h1>Sign Up for Stock Tracker </h1>
 <h3>Fill out all the information below to get started</h3>
 
+<p><%= link_to "Login with Github", "/auth/github" %></p>
+
 <% if @user.errors.any? %>
     <% @user.errors.each do |error| %>
         <div>
