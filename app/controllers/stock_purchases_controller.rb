@@ -2,7 +2,12 @@ class StockPurchasesController < ApplicationController
 
     def new
         @portfolio = Portfolio.find_by(id: params[:portfolio_id])
-        @stock_purchase = @portfolio.stock_purchases.build
+        if @portfolio.stock_purchases.size < 5
+            @stock_purchase = @portfolio.stock_purchases.build
+        else
+            flash[:message] = "I'm sorry, currently the app limits a portfolio to 5 stocks"
+            render :'portfolios/show'
+        end
     end
 
     def create
