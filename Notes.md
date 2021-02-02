@@ -158,10 +158,7 @@ User can keep track of their portfolios and create stock watchlists
 
 
 # Next Steps
-1. Clean up View's that have to much logic x 
-2. Clean up controller actions x
-3. CSS
-4. Organize Watchlist stocks, Organize Portfolio stocks
-5. Get IEX API Working (New Branch)
-6. Build a Scraper to avoid Request limit issue (New Branch)
-7. Can remove the conditional logic in stocks controller & stockpurchases controller if steps 6/7 working
+1. CSS
+2. Check if app is DRY
+3. Organize Watchlist stocks, Organize Portfolio stocks
+4. Build a Scraper to avoid Request limit issue (New Branch)
