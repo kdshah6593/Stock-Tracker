@@ -30,14 +30,14 @@ User can keep track of their portfolios and create stock watchlists
 - [x] Watchlist -> New watchlist, Edit watchlist, Index of watchlists
 - [x] Sessions -> Log In and Log out
 - [x] Stocks -> Index of Stocks, Show page of stocks
-- ?Static -> maybe for home page
+- [x] Static -> maybe for home page
 - [x] Application - for helper methods or stuff, could do static#home instead here
 
 # Views
-- User -> user show page will show links to watchlist index and portfolio index, total value of portfolios, add watchlist or add portfolio links; do a user profile page (can see details of user with edit link)
-- Watchlist -> index, show, new, edit
-- Portfolio -> index, show, new, edit ; a portfolio will show the value of the portfolio, gain/loss (compared from cost of stock), list of stocks in portfolio, links to edit/delete portfolio or add stocks; portfolio index will list the user's portfolios, add portfolio link, edit portfolio link, delete portfolio link
-- Stocks -> index, show (CANNOT ADD or EDIT stocks pulled from API)
+- [x] User -> user show page will show links to watchlist index and portfolio index, total value of portfolios, add watchlist or add portfolio links; do a user profile page (can see details of user with edit link)
+- [x] Watchlist -> index, show, new, edit
+- [x] Portfolio -> index, show, new, edit ; a portfolio will show the value of the portfolio, gain/loss (compared from cost of stock), list of stocks in portfolio, links to edit/delete portfolio or add stocks; portfolio index will list the user's portfolios, add portfolio link, edit portfolio link, delete portfolio link
+- [x] Stocks -> index, show (CANNOT ADD or EDIT stocks pulled from API)
 
 # Controller Actions
 - If I don't nest portfolios under user, then I can nest stock purchases under portfolios which allows me to then get portfolio_id to use in hte stock purchase controller
@@ -119,7 +119,7 @@ User can keep track of their portfolios and create stock watchlists
 - add an organize stocks by alpahbet or highest price buttons (this can use the sequel functions like ORDER, WHERE, etc)
 
 # Stock Index Page
-- can add a SEARCH feature here
+- [x] can add a SEARCH feature here
 
 # Random Thoughts
 - [x] Check tables so numbers are float or integer as needed
@@ -158,14 +158,8 @@ User can keep track of their portfolios and create stock watchlists
 
 
 # Next Steps
-1. Add Stock Form in Watchlist Show page x
-2. Need to add checks so another user cannot change anything for a different user x
-3. Set up Profile Route, View, Editing User Info, Updating User Info, Deleting User x
-- check if user is actually wanting to delete x
-4. Search Stocks Feature x
-5. Organize Watchlist stocks, Organize Portfolio stocks
-6. OmniAuth
-7. CSS
-
-
-NEED TO CHANGE API METHOD to get all information in 1 request instead of calling API for each request
+1. Organize Watchlist stocks, Organize Portfolio stocks
+2. OmniAuth
+3. Clean up View's that have to much logic
+4. Clean up controller actions
+5. CSS
