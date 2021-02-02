@@ -162,3 +162,5 @@ User can keep track of their portfolios and create stock watchlists
 2. Clean up controller actions
 3. CSS
 4. Organize Watchlist stocks, Organize Portfolio stocks
+5. Get IEX API Working (New Branch)
+6. Build a Scraper to avoid Request limit issue (New Branch)
