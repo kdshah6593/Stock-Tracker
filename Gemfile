@@ -27,7 +27,7 @@ gem 'httparty'
 gem 'dotenv-rails', groups: [:development, :test]
 # OmniAuth & Strategies
 gem 'omniauth'
-gem 'omniauth-google'
+gem 'omniauth-github'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
