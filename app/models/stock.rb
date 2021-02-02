@@ -43,30 +43,30 @@ class Stock < ApplicationRecord
 
     # IEX API
     def quote
-        response = HTTParty.get("https://cloud.iexapis.com/stable/stock/#{self.symbol}/quote?token=#{ENV[IEX_API_KEY]}")
+        response = HTTParty.get("https://cloud.iexapis.com/stable/stock/#{self.symbol}/quote?token=#{ENV["IEX_API_KEY"]}")
     end
 
     def price
-        self.quote["iexRealTimePrice"]
+        self.quote["latestPrice"]
     end
 
     def open
-        self.quote["iexOpen"]
+        self.quote["open"]
     end
 
     def close
-        self.quote["iexClose"]
+        self.quote["close"]
     end
 
     def high
-        self.quote["week52high"]
+        self.quote["high"]
     end
 
     def low 
-        self.quote["week52low"]
+        self.quote["low"]
     end
 
     def percent_change
-        self.quote["changePercent"] x 100
+        self.quote["changePercent"]
     end
 end
