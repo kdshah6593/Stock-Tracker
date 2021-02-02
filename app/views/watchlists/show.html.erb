@@ -12,8 +12,6 @@
         <th>Current Price</th>
         <th>Open Price</th>
         <th>Previous Close Price</th>
-        <th>52 Week High</th>
-        <th>52 Week Low</th>
         <th>Percent Change</th>
     </tr>
     <% @watchlist.stocks.each do |stock| %>
@@ -21,12 +19,10 @@
             <td><%= stock.name %></td>
             <td><%= stock.symbol %></td>
             <td><%= stock.sector %></td>
-            <td><%= stock.price %></td>
-            <td><%= stock.open %></td>
-            <td><%= stock.close %></td>
-            <td><%= stock.high %></td>
-            <td><%= stock.low %></td>
-            <td><%= stock.percent_change %></td>
+            <td><%= stock.stock_price %></td>
+            <td><%= stock.stock_open %></td>
+            <td><%= stock.stock_close %></td>
+            <td><%= stock.stock_percent_change %></td>
         </tr>
     <% end %>
 </table>
