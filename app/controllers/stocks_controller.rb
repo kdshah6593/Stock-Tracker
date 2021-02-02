@@ -26,6 +26,13 @@ class StocksController < ApplicationController
         end
     end
 
+    def destroy
+        @watchlist = Watchlist.find_by(id: params[:watchlist_id])
+        @stock = Stock.find_by(id: params[:id])
+        @watchlist.stocks.delete(@stock)
+        redirect_to user_watchlist_path(current_user, @watchlist)
+    end
+
 
     private
     def stock_watchlist_params

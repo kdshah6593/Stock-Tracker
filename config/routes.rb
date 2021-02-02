@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   get '/watchlists/:watchlist_id/stocks/new', to: 'stocks#new', as: 'add_stock'
   post '/watchlists/:watchlist_id/stocks', to: 'stocks#create', as: 'submit_stock'
+  delete '/watchlists/:watchlist_id/stocks/:id', to: 'stocks#destroy', as: "delete_stock"
 
   #stock_purchases
   resources :stock_purchases, only: [:new, :create, :destroy], path: 'portfolios/:portfolio_id/stockpurchases'

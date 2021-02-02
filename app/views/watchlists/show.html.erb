@@ -34,6 +34,7 @@
                     <td><%= value %></td>
                 <% end %>
             <% end %>
+            <td><%= link_to "Remove Stock", delete_stock_path(@watchlist, stock), method: :delete, data: {confirm: "Are you sure you want remove this stock?"} %>
         </tr>
     <% end %>
 </table>
