@@ -1,6 +1,12 @@
 <h1><%= @portfolio.title %></h1>
 <h3><%= @portfolio.portfolio_type %> Account</h3>
 
+<% if flash[:message] %>
+    <div>
+        <%= flash[:message] %>
+    </div>
+<% end %>
+
 <table>
     <tr>
         <th>Stock</th>
