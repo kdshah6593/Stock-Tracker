@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   root "static#home"
 
-  get '/auth/:provider/callback', to: 'session#create'
+  get '/auth/:provider/callback', to: 'session#omniauth'
 
   #users
   resources :users, except: [:index, :new, :show]
