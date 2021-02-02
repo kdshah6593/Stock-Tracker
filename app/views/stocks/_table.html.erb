@@ -1,0 +1,14 @@
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Symbol</th>
+        <th>Sector</th>
+    </tr>
+    <% @stocks.each do |stock| %>
+        <tr>
+            <td><%= link_to stock.name, stock_path(stock) %></td>
+            <td><%= stock.symbol %></td>
+            <td><%= stock.sector %></td>
+        </tr>
+    <% end %>
+</table>
