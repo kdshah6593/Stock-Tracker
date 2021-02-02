@@ -1,7 +1,5 @@
 <h1>S&P 500 Stock List</h1>
 
-<p><%= link_to "View by Sector", stocks_sector_path %></p>
-
 <%= form_tag(stocks_path, method: :get) do %>
     <%= label_tag("Search For a Stock: ")%>
     <%= text_field_tag(:search, params[:search]) %>

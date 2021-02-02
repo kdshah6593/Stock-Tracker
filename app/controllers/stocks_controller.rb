@@ -33,6 +33,10 @@ class StocksController < ApplicationController
         redirect_to user_watchlist_path(current_user, @watchlist)
     end
 
+    def sector
+        @stocks = Stock.sector
+        render :sector
+    end
 
     private
     def stock_watchlist_params

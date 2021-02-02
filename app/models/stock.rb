@@ -12,6 +12,10 @@ class Stock < ApplicationRecord
         end
     end
 
+    def self.sector
+        order("sector ASC").order("name ASC")
+    end
+
     # This API limits requests to 5 per minute and 500 per day; need premium membership to accomodate more requests
     def stock_info
         info = {}
