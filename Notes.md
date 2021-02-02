@@ -158,7 +158,7 @@ User can keep track of their portfolios and create stock watchlists
 
 
 # Next Steps
-1. Clean up View's that have to much logic
+1. Clean up View's that have to much logic x 
 2. Clean up controller actions
 3. CSS
 4. Organize Watchlist stocks, Organize Portfolio stocks
