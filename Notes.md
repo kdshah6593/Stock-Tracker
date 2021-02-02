@@ -166,3 +166,6 @@ User can keep track of their portfolios and create stock watchlists
 5. Organize Watchlist stocks, Organize Portfolio stocks
 6. OmniAuth
 7. CSS
+
+
+NEED TO CHANGE API METHOD to get all information in 1 request instead of calling API for each request
