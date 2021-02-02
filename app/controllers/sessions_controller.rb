@@ -18,9 +18,9 @@ class SessionsController < ApplicationController
 
     def omniauth #login with 3rd party
         @user = User.find_or_create_by(provider: auth["provider"], uid: auth["uid"]) do |u|
-            name = auth["info"]["name"].split
-            u.email = auth["info"]["email"]
-            u.username = auth["info"]["nickname"]
+            name = info["name"].split
+            u.email = info["email"]
+            u.username = info["nickname"]
             u.first_name = name[0]
             u.last_name = name[1]
             u.password = SecureRandom.hex(16)
@@ -43,5 +43,9 @@ class SessionsController < ApplicationController
 
     def auth
         request.env['omniauth.auth']
+    end
+
+    def info
+        auth["info"]
     end
 end
