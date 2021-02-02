@@ -22,12 +22,4 @@ class Stock < ApplicationRecord
         info[:percent_change] = response["Global Quote"]["10. percent change"]
         info
     end
-
-
-
-    # IEX API
-    def quote
-        response = HTTParty.get("https://cloud.iexapis.com/stable/stock/#{self.symbol}/quote?token=#{ENV["IEX_API_KEY"]}")
-        #uses .quote for information
-    end
 end
