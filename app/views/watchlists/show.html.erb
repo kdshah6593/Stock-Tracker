@@ -7,11 +7,7 @@
 <%= render partial: "watchlists/stock_add", locals: {stock_watchlist: @stock_watchlist, watchlist: @watchlist} %>
 <br>
 
-<% if flash[:message] %>
-    <div>
-        <%= flash[:message] %>
-    </div>
-<% end %>
+<%= render "static/flash" %>
 
 <br>
 

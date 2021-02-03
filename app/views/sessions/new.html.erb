@@ -1,10 +1,6 @@
 <h1>Log In to Stock Tracker</h1>
 
-<% if flash[:message] %>
-    <div>
-        <%= flash[:message] %>
-    </div>
-<% end %>
+<%= render "static/flash" %>
 
 <%= render "sessions/form" %>
 

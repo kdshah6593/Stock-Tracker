@@ -1,11 +1,7 @@
 <h1><%= @portfolio.title %></h1>
 <h3><%= @portfolio.portfolio_type %> Account</h3>
 
-<% if flash[:message] %>
-    <div>
-        <%= flash[:message] %>
-    </div>
-<% end %>
+<%= render "static/flash" %>
 
 <%= link_to "Add Stock", new_stock_purchase_path(@portfolio) %>
 <%= link_to "Edit Portfolio", edit_user_portfolio_path(current_user, @portfolio) %>
