@@ -1,17 +1,17 @@
-<table class="table table-hover">
-    <thead class="thead-dark">
+<table class="table table-hover table-responsive-md">
+    <thead class="thead-light">
     <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Symbol</th>
-        <th scope="col">Sector</th>
+        <th scope="col" >Name</th>
+        <th scope="col" class="text-center">Symbol</th>
+        <th scope="col" class="text-center">Sector</th>
     </tr>
     </thead>
     <tbody>
     <% @stocks.each do |stock| %>
         <tr>
             <td><%= link_to stock.name, stock_path(stock) %></td>
-            <td><%= stock.symbol %></td>
-            <td><%= stock.sector %></td>
+            <td class="text-center"><%= stock.symbol %></td>
+            <td class="text-center"><%= stock.sector %></td>
         </tr>
     <% end %>
     </tbody>
