@@ -2,7 +2,7 @@
 
 <div class="d-flex">
     <div class="p-2">
-        <%= button_to "View by Sector", stocks_sector_path, class: "btn btn-primary" %>
+        <%= button_to "View by Sector", stocks_sector_path, method: :get, class: "btn btn-primary" %>
     </div>
     <div class="ml-auto p-2">
         <%= form_tag(stocks_path, method: :get, class: "form-inline") do %>
