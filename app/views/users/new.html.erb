@@ -1,12 +1,16 @@
-<h1>Sign Up for Stock Tracker </h1>
-<h3>Fill out all the information below to get started</h3>
+<div class="container text-center">
+    <h1>Sign Up for Stock Tracker </h1>
+    <h3>Fill out all the information below to get started</h3>
 
-<p><%= link_to "Login with Github", "/auth/github" %></p>
+    <div class="signup-content">
+        <p class="border border-success bg-success">
+            <%= fa_icon "github" %>
+            <%= link_to "Login with Github", "/auth/github", class: "text-light" %>
+        </p>
 
-<%= render partial: "static/error", locals: {model: @user } %>
+        <%= render partial: "static/error", locals: {model: @user } %>
 
-<%= render partial: "form", locals: {user: @user } %>
-
-
-
+        <%= render partial: "form", locals: {user: @user } %>
+    </div>
+</div>
 
