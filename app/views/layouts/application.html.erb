@@ -39,6 +39,14 @@
         </div>
       <% end %>
     </nav>
+
     <%= yield %>
+
+    <footer class="footer fixed-bottom bg-primary">
+      <div class="container text-center">
+        <span class="text-white"><%= fa_icon "copyright" %> 2021 MIT Licensed</span>
+        <p class="text-white"><%= link_to "Stock Tracker", "https://github.com/kdshah6593/Stock-Tracker", class: "text-white" %> - by Kunal Shah</p>
+      </div>
+    </footer>
   </body>
 </html>
