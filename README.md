@@ -1,4 +1,5 @@
 # Stock Tracker
+This is the documentation for the Stock Tracker web app developed as a Rails project for Flatiron School
 
 ## Description
 Stock Tracker is a web application developed using Ruby on Rails incorporating CRUD and MVC principles. This web app is intended for users to keep track of their many stock portfolios in one place maintain watchlists, and view stock information. Currently, stocks listed are only from the S&P500.
