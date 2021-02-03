@@ -160,3 +160,4 @@ User can keep track of their portfolios and create stock watchlists
 ## Next Steps
 1. CSS
 2. Check if app is DRY
+3. Home Page Text, Regex Email Validator, Use HTML Require, Add Up Investments for a Total
