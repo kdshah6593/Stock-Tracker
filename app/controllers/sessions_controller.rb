@@ -29,7 +29,7 @@ class SessionsController < ApplicationController
             session[:user_id] = @user.id
             redirect_to user_path(@user)
         else
-            flash[:message] = "Oops, something went wrong!"
+            flash[:message] = "Please make sure your GitHub email is set to public!"
             redirect_to login_path
         end
     end
