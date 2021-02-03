@@ -1,24 +1,24 @@
 <%= form_for(user, html: {class: "signup-form"}) do |f| %>
-    <div class="field_with_errors">
-        <%= f.label :first_name, class: "sr-only"  %>
-        <%= f.text_field :first_name, class: "form-control", placeholder: "First Name", required: true %><br>
-    </div>
-    <div class="field_with_errors">
-        <%= f.label :last_name, class: "sr-only"  %>
-        <%= f.text_field :last_name, class: "form-control", placeholder: "Last Name", required: true %><br>
-    </div>
-    <div class="field_with_errors">
-        <%= f.label :username, class: "sr-only"  %>
-        <%= f.text_field :username, class: "form-control", placeholder: "Username", required: true %><br>
-    </div>
-    <div class="field_with_errors">
-        <%= f.label :password, class: "sr-only"  %>
-        <%= f.text_field :password, class: "form-control", placeholder: "Password", required: true %><br>
-    </div>
-    <div class="field_with_errors">
-        <%= f.label :email, class: "sr-only"  %>
-        <%= f.text_field :email, class: "form-control", placeholder: "Email Address", required: true %><br>
-        <br>
-    </div>
+
+    <%= f.label :first_name, class: "sr-only"  %>
+    <%= f.text_field :first_name, class: "form-control", placeholder: "First Name", required: true %><br>
+
+
+    <%= f.label :last_name, class: "sr-only"  %>
+    <%= f.text_field :last_name, class: "form-control", placeholder: "Last Name", required: true %><br>
+
+
+    <%= f.label :username, class: "sr-only"  %>
+    <%= f.text_field :username, class: "form-control", placeholder: "Username", required: true %><br>
+
+
+    <%= f.label :password, class: "sr-only"  %>
+    <%= f.text_field :password, class: "form-control", placeholder: "Password", required: true %><br>
+
+
+    <%= f.label :email, class: "sr-only"  %>
+    <%= f.text_field :email, class: "form-control", placeholder: "Email Address", required: true %><br>
+    <br>
+
     <%= f.submit "Sign Up", class: "btn btn-lg btn-primary" %>
 <% end %>
