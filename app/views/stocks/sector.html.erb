@@ -1,12 +1,19 @@
-<h1>S&P 500 Stock List</h1>
+<h1 class="text-center">S&P 500 Stock List</h1>
 
-<p><%= link_to "View All Stocks", stocks_path %></p>
-
-<%= form_tag(stocks_sector_path, method: :get) do %>
-    <%= label_tag("Filter by Sector: ")%>
-    <%= select_tag(:sector, options_for_select(Stock.list_of_sectors), {:include_blank => "Select Sector"}) %>
-    <%= submit_tag ("Filter") %>
-<% end %>
+<div class="d-flex">
+    <div class="p-2">
+        <%= button_to "View All Stocks", stocks_path, method: :get, class: "btn btn-primary" %>
+    </div>
+    <div class="ml-auto p-2">
+        <%= form_tag(stocks_sector_path, method: :get, class: "form-inline") do %>
+            <div class="mr-sm-2">
+                <%= label_tag "sector", "Filter by Sector: ", class: "sr-only" %>
+                <%= select_tag(:sector, options_for_select(Stock.list_of_sectors), {:include_blank => "Select Sector", class: "form-control"}) %>
+            </div>
+            <%= submit_tag "Filter", class: "btn btn-primary my-2 my-sm-0" %>
+        <% end %>
+    </div>
+</div>
 
 <br>
 
