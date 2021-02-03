@@ -1,44 +1,30 @@
-# README
-
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
 # Stock Tracker
 
 ## Description
-Stock Tracker is a web application developed using Rails incorporating CRUD and MVC principles. The application can sign up and login users that can add workouts to their profile. Per individual workout, a user can add exercises. Users can view others exercises as well. 
+Stock Tracker is a web application developed using Ruby on Rails incorporating CRUD and MVC principles. This web app is intended for users to keep track of their many stock portfolios in one place maintain watchlists, and view stock information. Currently, stocks listed are only from the S&P500.
+
+This app was developed using `ruby 2.6.1` and `Rails 6.1`
 
 <a href="https://iexcloud.io">Data provided by IEX Cloud</a>
 
+## Installation
+To use this app, clone this repo: `$ git clone https://github.com/kdshah6593/Stock-Tracker`
+
 ## Usage
 
-To use this app, clone this repo, 'cd' into the directory, run 'bundle install', run 'rake db:migrate' and then run 'shotgun'. Everything will already be set up. 
+After cloning, access the directory `$ cd stock-tracker` (if nested under other directories be sure to include those in the path)
+
+Run `$ bundle install` to add dependencies
+
+Run `$ rails db:migrate` to seed the database with the basic stock information 
+
+Start the server `$ rails s` and open your browser to `localhost:3000`
 
 NOTE: When you run 'shotgun' your terminal may say it is ignoring certain gems because "extensions are not built". It will tell you to try: 'gem pristine gem_name --version x.x.xx'. Exit shotgun with 'ctrl+C'. Then use that command for each gem it refers to you in the terminal to restore the gem. Then re-run 'shotgun' and everything should work. 
 
 ## Contributing
+Stretch goals in progress are listed in the [Notes.md](https://github.com/kdshah6593/Stock-Tracker/blob/main/Notes.md)
+
 Bug reports and pull requests are welcome on GitHub at https://github.com/kdshah6593/Stock-Tracker. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/kdshah6593/Stock-Tracker/blob/main/CODE_OF_CONDUCT.md).
 
 ## License
