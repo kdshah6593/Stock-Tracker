@@ -1,12 +1,19 @@
-<h1>S&P 500 Stock List</h1>
+<h1 class="text-center">S&P 500 Stock List</h1>
 
-<p><%= link_to "View by Sector", stocks_sector_path %></p>
-
-<%= form_tag(stocks_path, method: :get) do %>
-    <%= label_tag("Search For a Stock: ")%>
-    <%= text_field_tag(:search, params[:search]) %>
-    <%= submit_tag ("Search") %>
-<% end %>
+<div class="d-flex">
+    <div class="p-2">
+        <%= button_to "View by Sector", stocks_sector_path, class: "btn btn-primary" %>
+    </div>
+    <div class="ml-auto p-2">
+        <%= form_tag(stocks_path, method: :get, class: "form-inline") do %>
+            <div class="mr-sm-2">
+                <%= label_tag "search", "Search for a Stock", class: "sr-only" %>
+                <%= text_field_tag(:search, params[:search], class: "form-control", placeholder: "Search for a Stock") %>
+            </div>
+            <%= submit_tag "Search", class: "btn btn-primary my-2 my-sm-0" %>
+        <% end %>
+    </div>
+</div>
 
 <br>
 
