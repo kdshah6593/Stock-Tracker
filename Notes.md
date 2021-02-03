@@ -1,15 +1,15 @@
 # Stock Tracker
 
-# Description
+## Description
 User can keep track of their portfolios and create stock watchlists
 
-# Models
+## Models
 - [x] User (name, username, email, password)
 - [x] Portfolio (title, type of portfolio(roth, brokerage, 401k))
 - [x] Watchlist (title, description?)
 - [x] Stock (name, symbol, price) - this will be seeded by API; will not be manually creating any stocks
 
-# Associations
+## Associations
 - [x] User has many portfolios
 - [x] User has many watchlists 
 - User has many stocks through portfolio ??????
@@ -20,11 +20,11 @@ User can keep track of their portfolios and create stock watchlists
 - [x] Stock has many portfolios through stock_purchases
 - [x] Stock has many watchlists through watchlist_stocks
 
-# Join Tables (one needs to take user attribute)
+## Join Tables (one needs to take user attribute)
 - [x] stock_watchlists (watchlist_id, stock_id)
 - [x] stock_purchases (amount (integer), cost per stock (float), portfolio_id, stock_id)
 
-# Controllers
+## Controllers
 - [x] User -> Sign Up, Edit User Information
 - [x] Portfolio -> Edit
 - [x] Watchlist -> New watchlist, Edit watchlist, Index of watchlists
@@ -33,13 +33,13 @@ User can keep track of their portfolios and create stock watchlists
 - [x] Static -> maybe for home page
 - [x] Application - for helper methods or stuff, could do static#home instead here
 
-# Views
+## Views
 - [x] User -> user show page will show links to watchlist index and portfolio index, total value of portfolios, add watchlist or add portfolio links; do a user profile page (can see details of user with edit link)
 - [x] Watchlist -> index, show, new, edit
 - [x] Portfolio -> index, show, new, edit ; a portfolio will show the value of the portfolio, gain/loss (compared from cost of stock), list of stocks in portfolio, links to edit/delete portfolio or add stocks; portfolio index will list the user's portfolios, add portfolio link, edit portfolio link, delete portfolio link
 - [x] Stocks -> index, show (CANNOT ADD or EDIT stocks pulled from API)
 
-# Controller Actions
+## Controller Actions
 - If I don't nest portfolios under user, then I can nest stock purchases under portfolios which allows me to then get portfolio_id to use in hte stock purchase controller
     - or only nest portfolio index and show under Users
     - only nest watchlist index and show under Users
@@ -80,7 +80,7 @@ User can keep track of their portfolios and create stock watchlists
     - [] [] Edit/Update: MAYBE
     - [x] [x] Delete: remove a stock purchase
 
-# Routes
+## Routes
 - [x] POST /users #create
 - [x] GET && PATCH && DELETE /users/:id #show #update #delete
 - [x] GET /users/new AS: signup #new
@@ -107,21 +107,21 @@ User can keep track of their portfolios and create stock watchlists
 - [x] POST /watchlists/:watchlist_id/stocks #create
 
 
-# Helpers
+## Helpers
 - [x] current_user, verified_user? authenticated ==> these will go in application controller
 - View Helpers go in the helpers directory, these return snippets of HTML code; helps clean up views
 
-# Portfolio View Page
+## Portfolio View Page
 - Use CSS to highlight if a stock is above or below what you bought it at (uses the cost attribute from stock purchase)
 - add an organize stocks by alpahbet or highest price buttons (this can use the sequel functions like ORDER, WHERE, etc)
 
-# Watchlist View Page
+## Watchlist View Page
 - add an organize stocks by alpahbet or highest price buttons (this can use the sequel functions like ORDER, WHERE, etc)
 
-# Stock Index Page
+## Stock Index Page
 - [x] can add a SEARCH feature here
 
-# Random Thoughts
+## Random Thoughts
 - [x] Check tables so numbers are float or integer as needed
 - [x] Portfolio types can be radio buttons
 - [x] Nest Portfolio and Watchlists under User
@@ -139,7 +139,7 @@ User can keep track of their portfolios and create stock watchlists
 - [x] for any .save? checks, in the else statement, use render so then error can be seen
 
 
-# Flow
+## Flow
 1. User comes to home page, goes to a portfolio
 2. Clicks Add Stock to Portfolio. Takes you to a NEW stock_purchase form
 3. Fill out amount and cost, choose a stock from dropdown list or if you know symbol (add this functionality if time)
@@ -152,13 +152,11 @@ User can keep track of their portfolios and create stock watchlists
 4. Upon submission, adds the stocks to watchlist.stocks array then redirects you to watchlist show page
     - Figure out way to add a another field for a new stock drop down list for each time one is selected
 
-# Future features
+## Stretch Goals
+- Convert stock seeded data from S&P500 to NYSE & NASDAQ & add a stock exchange column to stock model 
 - Add a CASH attribute to Users - Stock purchases would then subtract from CASH value and user can add more cash to their account
+- Be able to filter/order Watchlist and Portfolio stocks
 
-
-
-# Next Steps
+## Next Steps
 1. CSS
 2. Check if app is DRY
-3. Organize Watchlist stocks, Organize Portfolio stocks
-4. Build a Scraper to avoid Request limit issue (New Branch)
