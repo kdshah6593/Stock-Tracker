@@ -1,9 +1,9 @@
 <%= form_for(@user, url: session_path) do |f| %>
-    <%= f.label :username %>
-    <%= f.text_field :username %><br>
+    <%= f.label :username, class: "sr-only" %>
+    <%= f.text_field :username, class: "form-control", placeholder: "Username", required: true %>
 
-    <%= f.label :password %>
-    <%= f.password_field :password %><br>
+    <%= f.label :password, class: "sr-only" %>
+    <%= f.password_field :password, class: "form-control", placeholder: "Password", required: true %>
     <br>
-    <%= f.submit "Login" %>
+    <%= f.submit "Login", class: "btn btn-lg btn-primary"%>
 <% end %>

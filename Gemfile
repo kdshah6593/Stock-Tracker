@@ -29,6 +29,8 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'omniauth'
 gem 'omniauth-github'
 # gem 'omniauth-rails_csrf_protection'
+# Font Awesome
+gem 'font-awesome-rails'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

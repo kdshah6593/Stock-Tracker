@@ -1,9 +1,14 @@
-<h1>Log In to Stock Tracker</h1>
+<div class="text-center form-signin border border-primary rounded">
+    <h1>Stock Tracker</h1>
+    <h2>Please sign in</h2>
 
-<%= render "static/flash" %>
+    <%= render "static/flash" %>
 
-<%= render "sessions/form" %>
+    <%= render "sessions/form" %>
 
-<br>
-
-<%= link_to "Login with Github", "/auth/github" %>
+    <br>
+    <div class="border border-success">
+        <%= fa_icon "github" %>
+        <%= link_to "Login with Github", "/auth/github" %>
+    </div>
+</div>

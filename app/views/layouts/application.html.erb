@@ -11,21 +11,30 @@
   </head>
 
   <body>
-    <nav>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
       <% if logged_in? %>
-      <ul>
-        <li><%= link_to "Home", user_path(current_user) %></li>
-        <li><%= link_to "Stocks", stocks_path %></li>
-        <li><%= link_to "Portfolios", user_portfolios_path(current_user) %></li>
-        <li><%= link_to "Watchlists", user_watchlists_path(current_user) %></li>
-        <li><%= link_to "Profile", user_profile_path(current_user) %></li>
-        <li><%= link_to "Log Out", logout_path, method: :delete %></li>
-      </ul>
+        <%= link_to "Stock Trader", user_path(current_user), class: "navbar-brand" %>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class='nav-item'><%= link_to "Home", user_path(current_user), class: "nav-link" %></li>
+            <li class='nav-item'><%= link_to "Stocks", stocks_path, class: "nav-link" %></li>
+            <li class='nav-item'><%= link_to "Portfolios", user_portfolios_path(current_user), class: "nav-link" %></li>
+            <li class='nav-item'><%= link_to "Watchlists", user_watchlists_path(current_user), class: "nav-link" %></li>
+            <li class='nav-item'><%= link_to "Profile", user_profile_path(current_user), class: "nav-link" %></li>
+            <li class='nav-item'><%= link_to "Log Out", logout_path, method: :delete, class: "nav-link" %></li>
+          </ul>
+        </div>
       <% else %>
-      <ul>
-        <li><%= link_to "Sign Up", signup_path %></li>
-        <li><%= link_to "Login", login_path %></li>
-      </ul>
+        <div class="navbar-nav-scroll">
+          <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class='nav-item active'><%= link_to "Sign Up", signup_path, class: "nav-link"  %></li>
+            <li class='nav-item active'><%= link_to "Login", login_path, class: "nav-link"  %></li>
+          </ul>
+        </div>
       <% end %>
     </nav>
     <%= yield %>
