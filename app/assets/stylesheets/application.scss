@@ -19,10 +19,15 @@
  body {
      padding-top: 65px;
      margin: 20px;
+     background-color: #eef7ff;
  }
 
  .field_with_errors {
      border: 1px solid #ffc3c3;
      background: #ffc3c3;
      font-weight: bold;
+ }
+
+ h1 {
+     color: #d86502;
  }
