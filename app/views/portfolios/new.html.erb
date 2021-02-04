@@ -1,7 +1,11 @@
-<h1>New Portfolio</h1>
+<h1 class="text-center">New Portfolio</h1>
 
 <%= render partial: "static/error", locals: {model: @portfolio } %>
 
-<%= form_for(@portfolio, url: user_portfolios_path(current_user)) do |f| %>
-    <% render partial: "form", locals: {f: f}%>
-<% end %>
+<br>
+
+<div class="d-flex justify-content-center">
+    <%= form_for(@portfolio, url: user_portfolios_path(current_user)) do |f| %>
+        <% render partial: "form", locals: {f: f}%>
+    <% end %>
+</div>

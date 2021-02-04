@@ -1,14 +1,32 @@
-<%= f.label :title %>
-<%= f.text_field :title %><br>
-
-<%= f.radio_button :portfolio_type, "Brokerage" %>
-<%= f.label :portfolio_type_brokerage, "Brokerage" %>
-<%= f.radio_button :portfolio_type, "Traditional IRA" %>
-<%= f.label :portfolio_type_traditional_ira, "Traditional IRA" %>
-<%= f.radio_button :portfolio_type, "Roth IRA" %>
-<%= f.label :portfolio_type_roth_ira, "Roth IRA" %>
-<%= f.radio_button :portfolio_type, "401K" %>
-<%= f.label :portfolio_type_401k, "401K" %>
+<div class="form-group row">
+    <%= f.label :title, class: "col-sm-3 col-form-label" %>
+    <%= f.text_field :title, class: "form control col-sm-9" %><br>
+</div>
+<fieldset class="form-group">
+    <div class="row">
+        <legend class="col-form-label col-sm-2 pt-0">Type</legend>
+        <div class="col-sm-9">
+            <div class="form-check">
+                <%= f.radio_button :portfolio_type, "Brokerage", class: "form-check-input" %>
+                <%= f.label :portfolio_type_brokerage, "Brokerage", class:"form-check-label" %>
+            </div>
+            <div class="form-check">
+                <%= f.radio_button :portfolio_type, "Traditional IRA", class: "form-check-input" %>
+                <%= f.label :portfolio_type_traditional_ira, "Traditional IRA", class:"form-check-label" %>
+            </div>
+            <div class="form-check">
+                <%= f.radio_button :portfolio_type, "Roth IRA", class: "form-check-input" %>
+                <%= f.label :portfolio_type_roth_ira, "Roth IRA", class:"form-check-label" %>
+            </div>
+            <div class="form-check">
+                <%= f.radio_button :portfolio_type, "401K", class: "form-check-input" %>
+                <%= f.label :portfolio_type_401k, "401K", class:"form-check-label" %>
+            </div>
+        </div>
+    </div>
+</fieldset>
 
 <br><br>
-<%= f.submit %>
+<div class="d-flex justify-content-center">
+    <%= f.submit class: "btn btn-header-color" %>
+</div>
