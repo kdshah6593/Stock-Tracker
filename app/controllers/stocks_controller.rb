@@ -5,7 +5,7 @@ class StocksController < ApplicationController
     end
 
     def show 
-        @stock = Stock.find_by(id: params[:id])
+        stock_find
     end
 
     def new #this is form to add a stock to watchlist #possibly don't need since form built into watchlist show page
@@ -23,7 +23,7 @@ class StocksController < ApplicationController
 
     def destroy
         @watchlist = Watchlist.find_by(id: params[:watchlist_id])
-        @stock = Stock.find_by(id: params[:id])
+        stock_find
         @watchlist.stocks.delete(@stock)
         redirect_to user_watchlist_path(current_user, @watchlist)
     end
@@ -35,5 +35,9 @@ class StocksController < ApplicationController
     private
     def stock_watchlist_params
         params.require(:stock_watchlist).permit(:stock_id, :watchlist_id)
+    end
+
+    def stock_find
+        @stock = Stock.find_by(id: params[:id])
     end
 end
