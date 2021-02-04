@@ -1,6 +1,6 @@
 <% if model.errors.any? %>
     <% model.errors.each do |error| %>
-        <div>
+        <div class="text_with_errors">
             <%= error.full_message %><br><br>
         </div>
     <% end %>
