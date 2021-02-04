@@ -158,6 +158,7 @@ User can keep track of their portfolios and create stock watchlists
 - Be able to filter/order Watchlist and Portfolio stocks
 
 ## Next Steps
-1. CSS
+1. CSS - Root Page and Home Page, Adjust profile page and stock show page for changing screen size, fix field errors css
 2. Check if app is DRY
-3. Home Page Text, Regex Email Validator, Use HTML Require, Add Up Investments for a Total
+3. Need to write in how each spec is fulfilled
+4. Regex Email Validator, Add Up Investments for a Total
