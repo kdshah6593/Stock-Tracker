@@ -2,5 +2,5 @@
     <%= f.hidden_field :watchlist_id %>
     <%= f.label :stock, "Add a New Stock: ", class: "font-weight-bold" %>
     <%= f.collection_select(:stock_id, Stock.all, :id, :name, {include_blank: 'Select a Stock'})%>
-    <%= f.submit "Add", class: "btn btn-primary" %>
+    <%= f.submit "Add", class: "btn btn-header-color" %>
 <% end %>

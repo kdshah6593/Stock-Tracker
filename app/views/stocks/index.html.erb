@@ -2,7 +2,7 @@
 
 <div class="d-flex">
     <div class="p-2">
-        <%= button_to "View by Sector", stocks_sector_path, method: :get, class: "btn btn-primary" %>
+        <%= button_to "View by Sector", stocks_sector_path, method: :get, class: "btn btn-header-color" %>
     </div>
     <div class="ml-auto p-2">
         <%= form_tag(stocks_path, method: :get, class: "form-inline") do %>
@@ -10,7 +10,7 @@
                 <%= label_tag "search", "Search for a Stock", class: "sr-only" %>
                 <%= text_field_tag(:search, params[:search], class: "form-control", placeholder: "Search for a Stock") %>
             </div>
-            <%= submit_tag "Search", class: "btn btn-primary my-2 my-sm-0" %>
+            <%= submit_tag "Search", class: "btn btn-header-color my-2 my-sm-0" %>
         <% end %>
     </div>
 </div>

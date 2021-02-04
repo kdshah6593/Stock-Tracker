@@ -5,13 +5,13 @@
 
 <div class="d-flex">
     <div class="p-2">
-        <%= button_to "Add Stock", new_stock_purchase_path(@portfolio), method: :get, class: "btn btn-primary" %>
+        <%= button_to "Add Stock", new_stock_purchase_path(@portfolio), method: :get, class: "btn btn-header-color" %>
     </div>
     <div class="p-2">
-        <%= button_to "Edit Portfolio", edit_user_portfolio_path(current_user, @portfolio), method: :get, class: "btn btn-primary" %>
+        <%= button_to "Edit Portfolio", edit_user_portfolio_path(current_user, @portfolio), method: :get, class: "btn btn-header-color" %>
     </div>
     <div class="p-2">
-        <%= button_to "Delete Portfolio", user_portfolio_path(current_user, @portfolio), method: :delete, data: {confirm: "Are you sure you want to delete this portfolio? "}, class: "btn btn-primary" %>
+        <%= button_to "Delete Portfolio", user_portfolio_path(current_user, @portfolio), method: :delete, data: {confirm: "Are you sure you want to delete this portfolio? "}, class: "btn btn-header-color" %>
     </div>
 </div>
 <br>

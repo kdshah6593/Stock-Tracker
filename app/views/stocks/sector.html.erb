@@ -2,7 +2,7 @@
 
 <div class="d-flex">
     <div class="p-2">
-        <%= button_to "View All Stocks", stocks_path, method: :get, class: "btn btn-primary" %>
+        <%= button_to "View All Stocks", stocks_path, method: :get, class: "btn btn-header-color" %>
     </div>
     <div class="ml-auto p-2">
         <%= form_tag(stocks_sector_path, method: :get, class: "form-inline") do %>
@@ -10,7 +10,7 @@
                 <%= label_tag "sector", "Filter by Sector: ", class: "sr-only" %>
                 <%= select_tag(:sector, options_for_select(Stock.list_of_sectors), {:include_blank => "Select Sector", class: "form-control"}) %>
             </div>
-            <%= submit_tag "Filter", class: "btn btn-primary my-2 my-sm-0" %>
+            <%= submit_tag "Filter", class: "btn btn-header-color my-2 my-sm-0" %>
         <% end %>
     </div>
 </div>
