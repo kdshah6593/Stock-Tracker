@@ -1,3 +1,18 @@
 // Place all the styles related to the Stocks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.mx-6 {
+    margin-left: (16px * 12.5) !important;
+    margin-right: (16px * 12.5) !important;
+}
+
+span.font-big {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ff7575;
+}
+
+.bolder {
+    font-weight: 500;
+}

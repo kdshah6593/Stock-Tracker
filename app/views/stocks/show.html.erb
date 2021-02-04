@@ -1,8 +1,13 @@
-<h1><%= @stock.name %></h1>
-<h3>Symbol: <%= @stock.symbol %></h3>
-<h3>Sector: <%= @stock.sector %></h3>
+<h1 class="text-center"><%= @stock.name %></h1>
 
-<p>Current Price: <%= @stock.iex_stock_info[:price] %></p>
-<p>Today's Open: <%= @stock.iex_stock_info[:open] %></p> </p>
-<p>Yesterday's Close: <%= @stock.iex_stock_info[:close] %></p> </p>
-<p>Percent Change: <%= @stock.iex_stock_info[:percent_change] %></p>
+<div class="row">
+    <div class="col"><h4 class="text-center">Symbol: <%= @stock.symbol %></h4></div>
+    <div class="col"><h4 class="text-center">Sector: <%= @stock.sector %></h4></div>
+</div>
+
+<ul class="list-group my-3 mx-6">
+    <li class="list-group-item text-center bolder"><span class="font-big">Current Price:</span> <%= @stock.iex_stock_info[:price] %></li>
+    <li class="list-group-item text-center bolder"><span class="font-big">Today's Open:</span> <%= @stock.iex_stock_info[:open] %></li>
+    <li class="list-group-item text-center bolder"><span class="font-big">Yesterday's Close:</span> <%= @stock.iex_stock_info[:close] %></li>
+    <li class="list-group-item text-center bolder"><span class="font-big">Percent Change:</span> <%= @stock.iex_stock_info[:percent_change] %></li>
+</ul>
