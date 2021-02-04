@@ -4,7 +4,7 @@
             <th scope="col">Stock</th>
             <th scope="col" class="text-center">Quantity</th>
             <th scope="col" class="text-center">Total Cost</th>
-            <th scope="col" class="text-center">Cost Per Unit</th>
+            <th scope="col" class="text-center">Cost Per Share</th>
             <th scope="col" class="text-center">Current Price</th>
             <th scope="col" class="text-center"></th>
         </tr>
@@ -14,9 +14,9 @@
         <tr>
             <td><%= stock_purchase.stock.name %></td>
             <td class="text-center"><%= stock_purchase.amount %></td>
-            <td class="text-center"><%= (stock_purchase.amount * stock_purchase.cost).round(2) %>
-            <td class="text-center"><%= stock_purchase.cost %></td>
-            <td class="text-center"><%= stock_purchase.stock.iex_stock_info[:price] %>
+            <td class="text-center">$<%= (stock_purchase.amount * stock_purchase.cost).round(2) %>
+            <td class="text-center">$<%= stock_purchase.cost %></td>
+            <td class="text-center">$<%= stock_purchase.stock.iex_stock_info[:price] %>
             <td class="text-center"><%= link_to "Remove Purchase", stock_purchase_path(@portfolio, stock_purchase), method: :delete, data: {confirm: "Are you sure you want remove this purchase?"} %>
         </tr>
     <% end %>

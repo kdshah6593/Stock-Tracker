@@ -4,7 +4,7 @@
     <div class="card">
         <img class="card-img-top" src="#" alt="">
         <div class="card-body">
-            <h5 class="card-title">Your Portfolios</h5>
+            <h5 class="card-title">My Portfolios</h5>
             <p class="card-text">Number of Portfolios: <%= @user.portfolio_count %></p>
             <%= button_to "View", user_portfolios_path(@user), method: :get, class: "btn btn-header-color" %>
         </div>
@@ -15,7 +15,7 @@
     <div class="card">
         <img class="card-img-top" src="#" alt="">
         <div class="card-body">
-            <h5 class="card-title">Your Watchlists</h5>
+            <h5 class="card-title">My Watchlists</h5>
             <p class="card-text">Number of Watchlists: <%= @user.watchlist_count %></p>
             <%= button_to "View", user_watchlists_path(@user), method: :get, class: "btn btn-header-color" %>
         </div>

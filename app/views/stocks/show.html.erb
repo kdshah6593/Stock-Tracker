@@ -6,8 +6,8 @@
 </div>
 
 <ul class="list-group my-3 mx-6">
-    <li class="list-group-item text-center bolder"><span class="font-big">Current Price:</span> <%= @stock.iex_stock_info[:price] %></li>
-    <li class="list-group-item text-center bolder"><span class="font-big">Today's Open:</span> <%= @stock.iex_stock_info[:open] %></li>
-    <li class="list-group-item text-center bolder"><span class="font-big">Yesterday's Close:</span> <%= @stock.iex_stock_info[:close] %></li>
-    <li class="list-group-item text-center bolder"><span class="font-big">Percent Change:</span> <%= @stock.iex_stock_info[:percent_change] %></li>
+    <li class="list-group-item text-center bolder"><span class="font-big">Current Price:</span> $<%= @stock.iex_stock_info[:price] %></li>
+    <li class="list-group-item text-center bolder"><span class="font-big">Today's Open:</span> $<%= @stock.iex_stock_info[:open] %></li>
+    <li class="list-group-item text-center bolder"><span class="font-big">Yesterday's Close:</span> $<%= @stock.iex_stock_info[:close] %></li>
+    <li class="list-group-item text-center bolder"><span class="font-big">Percent Change:</span> <%= @stock.iex_stock_info[:percent_change] %>%</li>
 </ul>

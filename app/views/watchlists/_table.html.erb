@@ -18,10 +18,10 @@
             <td class="text-center"><%= stock.symbol %></td>
             <td class="text-center"><%= stock.sector %></td>
             <% stock.iex_stock_info.each do |key, value| %>
-                <% if value == nil %>
-                    <td class="text-center"><%= "N/A" %></td>
+                <% if key == :percent_change %>
+                    <td class="text-center"><%= value %>%</td>
                 <% else %>
-                    <td class="text-center"><%= value %></td>
+                    <td class="text-center">$<%= value %></td>
                 <% end %>
             <% end %>
             <td class="text-center"><%= link_to "Remove Stock", delete_stock_path(@watchlist, stock), method: :delete, data: {confirm: "Are you sure you want remove this stock?"} %></td>
