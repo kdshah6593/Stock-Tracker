@@ -2,6 +2,8 @@ class User < ApplicationRecord
     has_secure_password
     has_many :watchlists, dependent: :destroy
     has_many :portfolios, dependent: :destroy
+    has_many :stock_purchases, through: :portfolios
+    has_many :stocks, through: :stock_purchases
     validates :username, presence: true
     validates :username, uniqueness: true, on: :create
     validates :first_name, presence: true, on: :create
