@@ -13,15 +13,21 @@ class StocksController < ApplicationController
 
     def create #this is to add a stock to watchlist
         @stock_watchlist = StockWatchlist.new(stock_watchlist_params)
-        if @stock_watchlist.save
-            redirect_to user_watchlist_path(current_user, @stock_watchlist.watchlist)
+        @watchlist = @stock_watchlist.watchlist
+        @stock = @stock_watchlist.stock
+        if @watchlist.stocks.include?(@stock)
+            flash[:message] = "This stock is already in your watchlist"
+            redirect_to user_watchlist_path(current_user, @watchlist)
         else
-            @watchlist = @stock_watchlist.watchlist
-            render :'/watchlists/show'
+            if @stock_watchlist.save
+                redirect_to user_watchlist_path(current_user, @watchlist)
+            else
+                render :'/watchlists/show'
+            end
         end
     end
 
-    def destroy
+    def destroy #removes stock from a watchlist
         @watchlist = Watchlist.find_by(id: params[:watchlist_id])
         stock_find
         @watchlist.stocks.delete(@stock)
