@@ -1,16 +1,18 @@
-<h1 class="text-center"><%= @user.username %>'s Profile Page</h1>
+<div class="container">
+    <h1 class="text-center"><%= @user.username %>'s Profile Page</h1>
 
-<ul class="list-group my-3 mx-7">
-    <li class="list-group-item"><span class="font-big">First Name: </span><span class="alignright"><%= @user.first_name %></span></li>
-    <li class="list-group-item"><span class="font-big">Last Name: </span><span class="alignright"><%= @user.last_name %></span></li>
-    <li class="list-group-item"><span class="font-big">Email: </span><span class="alignright"><%= @user.email %></span></li>
+    <ul class="list-group my-3 mx-7">
+        <li class="list-group-item"><span class="font-big">First Name: </span><span class="alignright"><%= @user.first_name %></span></li>
+        <li class="list-group-item"><span class="font-big">Last Name: </span><span class="alignright"><%= @user.last_name %></span></li>
+        <li class="list-group-item"><span class="font-big">Email: </span><span class="alignright"><%= @user.email %></span></li>
 
-    <li class="list-group-item d-flex justify-content-between align-items-center"><span class="font-big">Number of Portfolios: </span><span class="badge badge-primary badge-pill"><%= @user.portfolio_count %></span></li>
-    <li class="list-group-item d-flex justify-content-between align-items-center"><span class="font-big">Number of Watchlists: </span><span class="badge badge-primary badge-pill"><%= @user.watchlist_count %></span></li>
-</ul>
+        <li class="list-group-item d-flex justify-content-between align-items-center"><span class="font-big">Number of Portfolios: </span><span class="badge badge-primary badge-pill"><%= @user.portfolio_count %></span></li>
+        <li class="list-group-item d-flex justify-content-between align-items-center"><span class="font-big">Number of Watchlists: </span><span class="badge badge-primary badge-pill"><%= @user.watchlist_count %></span></li>
+    </ul>
 
 
-<div class="d-flex flex-column">
-    <div class="d-flex justify-content-center my-2"><%= button_to "Edit Profile", edit_user_path(@user), method: :get, class: "btn btn-header-color" %></div>
-    <div class="d-flex justify-content-center my-2"><%= button_to "Delete Account", user_path(@user), method: :delete, data: {confirm: "Are you sure you want to delete your account? "}, class: "btn btn-header-color" %></div>
+    <div class="d-flex flex-column">
+        <div class="d-flex justify-content-center my-2"><%= button_to "Edit Profile", edit_user_path(@user), method: :get, class: "btn btn-header-color" %></div>
+        <div class="d-flex justify-content-center my-2"><%= button_to "Delete Account", user_path(@user), method: :delete, data: {confirm: "Are you sure you want to delete your account? "}, class: "btn btn-header-color" %></div>
+    </div>
 </div>
