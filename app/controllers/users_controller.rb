@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
     skip_before_action :verified_user, only: [:new, :create]
+    before_action :user_find, only: [:edit, :update, :destroy]
 
     def new  #signup
         @user = User.new
@@ -20,17 +21,14 @@ class UsersController < ApplicationController
     end
 
     def edit
-        @user = User.find_by(id: params[:id])
     end
 
     def update
-        @user = User.find_by(id: params[:id])
         @user.update(update_user_params)
         redirect_to user_path(@user)
     end
 
     def destroy
-        @user = User.find_by(id: params[:id])
         @user.destroy
         session.clear
         redirect_to root_path
@@ -47,5 +45,9 @@ class UsersController < ApplicationController
 
     def update_user_params
         params.require(:user).permit(:first_name, :last_name, :email)
+    end
+
+    def user_find
+        @user = User.find_by(id: params[:id])
     end
 end
