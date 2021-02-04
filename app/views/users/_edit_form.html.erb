@@ -1,17 +1,22 @@
-<%= form_for user do |f| %>
-    <div class="field_with_errors">
-        <%= f.label :first_name %>
-        <%= f.text_field :first_name %><br>
-    </div>
-    <div class="field_with_errors">
-        <%= f.label :last_name %>
-        <%= f.text_field :last_name %><br>
-    </div>
-    <div class="field_with_errors">
-        <%= f.label :email %>
-        <%= f.text_field :email %><br>
-        <br>
-    </div>
+<div class="d-flex justify-content-center">
+    <%= form_for user do |f| %>
+        <div class="form-group">
+            <%= f.label :first_name %>
+            <%= f.text_field :first_name, class: "form-control pr-5" %><br>
+        </div>
+        <div class="form-group">
+            <%= f.label :last_name %>
+            <%= f.text_field :last_name, class: "form-control pr-5" %><br>
+        </div>
+        <div class="form-group">
+            <%= f.label :email %>
+            <%= f.text_field :email, class: "form-control pr-5" %><br>
+        </div>
 
-    <%= f.submit "Update" %>
-<% end %>
+        <br>
+
+        <div class="d-flex justify-content-center">
+            <%= f.submit "Update", class: "btn btn-header-color" %>
+        </div>
+    <% end %>
+</div>
