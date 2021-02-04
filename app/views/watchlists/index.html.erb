@@ -1,9 +1,26 @@
-<h1><%= @user.first_name %>'s Watchlists</h1>
+<h1 class="text-center"><%= @user.first_name %>'s Watchlists</h1>
 
-<p><%= link_to "Add a New Watchlist", new_user_watchlist_path(@user) %></p>
+<br>
 
-<% @user.watchlists.each do |watchlist| %>
-    <div>
-        <%= link_to watchlist.title, user_watchlist_path(@user, watchlist) %>
+<div class="container">
+    <div class="card-columns mb-3 text-center">
+        <% @user.watchlists.each do |watchlist| %>
+            <div class="card mb-4 box-shadow">
+                <div class="class-header">
+                    <h4 class="my-0 font-weight-normal"><%= watchlist.title %></h4>
+                </div>
+                <div class="class-body">
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Number of Stocks: <%= watchlist.stocks.size %></li>
+                    </ul>
+                    <%= button_to "View", user_watchlist_path(@user, watchlist), method: :get, class: "btn btn-lg btn-block btn-outline-primary" %>
+                </div>
+            </div>
+        <% end %>
     </div>
-<% end %>
+</div>
+
+<br>
+<div class="d-flex justify-content-center">
+    <%= button_to "Add a New Watchlist", new_user_watchlist_path(@user), method: :get, class: "btn btn-header-color" %>
+</div>
