@@ -1,6 +1,10 @@
-<h1>Stock Purchase</h1>
-<h3>Enter information for a stock you recently bought</h3>
+<h1 class="text-center">Stock Purchase</h1>
+<h4 class="text-center">Enter information for a stock you recently bought</h4>
 
 <%= render partial: "static/error", locals: {model: @stock_purchase } %>
 
-<%= render partial: "form", locals: {stock_purchase: @stock_purchase}%>
+<br>
+
+<div class="d-flex justify-content-center">
+    <%= render partial: "form", locals: {stock_purchase: @stock_purchase} %>
+</div>

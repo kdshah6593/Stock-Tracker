@@ -1,14 +1,34 @@
 <%= form_for stock_purchase do |f| %>
     <%= f.hidden_field :portfolio_id  %>
 
-    <%= f.label :stock, "Stock Purchased" %>
-    <%= f.collection_select(:stock_id, Stock.all, :id, :name, {include_blank: 'Select a stock'}) %><br><br>
-    
-    <%= f.label :amount, "Quantity Purchased (Shares)" %>
-    <%= f.number_field :amount, step: 1 %><br><br>
-
-    <%= f.label :cost, "Cost Per Share" %>
-    <%= f.number_field :cost, step: 0.01 %><br><br>
-
-    <%= f.submit "Add Stock to Portfolio" %>
+    <div class="form-row">
+        <div class="col">
+            <%= f.label :stock, "Stock Purchased" %>
+        </div>
+        <div class="col">
+            <%= f.collection_select(:stock_id, Stock.all, :id, :name, {include_blank: 'Select a stock'}) %>
+        </div>
+    </div>
+    <br><br>
+    <div class="form-row">
+        <div class="col">
+            <%= f.label :amount, "Shares Purchased" %>
+        </div>
+        <div class="col">
+            <%= f.number_field :amount, step: 1 %>
+        </div>
+    </div>
+    <br><br>
+    <div class="form-row">
+        <div class="col">
+            <%= f.label :cost, "Cost Per Share" %>
+        </div>
+        <div class="col">
+            <%= f.number_field :cost, step: 0.01 %>
+        </div>
+    </div>
+    <br><br>
+    <div class="d-flex justify-content-center">
+        <%= f.submit "Add Stock to Portfolio", class: "btn btn-header-color" %>
+    </div>
 <% end %>
