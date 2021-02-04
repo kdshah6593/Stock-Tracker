@@ -1,12 +1,12 @@
 <h1 class="text-center"><%= @user.username %>'s Profile Page</h1>
 
 <ul class="list-group my-3 mx-7">
-    <li class="list-group-item">First Name: <span class="alignright"><%= @user.first_name %></span></li>
-    <li class="list-group-item">Last Name: <span class="alignright"><%= @user.last_name %></span></li>
-    <li class="list-group-item">Email: <span class="alignright"><%= @user.email %></span></li>
+    <li class="list-group-item"><span class="font-big">First Name: </span><span class="alignright"><%= @user.first_name %></span></li>
+    <li class="list-group-item"><span class="font-big">Last Name: </span><span class="alignright"><%= @user.last_name %></span></li>
+    <li class="list-group-item"><span class="font-big">Email: </span><span class="alignright"><%= @user.email %></span></li>
 
-    <li class="list-group-item d-flex justify-content-between align-items-center">Number of Portfolios: <span class="badge badge-primary badge-pill"><%= @user.portfolios.size %></span></li>
-    <li class="list-group-item d-flex justify-content-between align-items-center">Number of Watchlists: <span class="badge badge-primary badge-pill"><%= @user.watchlists.size %></span></li>
+    <li class="list-group-item d-flex justify-content-between align-items-center"><span class="font-big">Number of Portfolios: </span><span class="badge badge-primary badge-pill"><%= @user.portfolios.size %></span></li>
+    <li class="list-group-item d-flex justify-content-between align-items-center"><span class="font-big">Number of Watchlists: </span><span class="badge badge-primary badge-pill"><%= @user.watchlists.size %></span></li>
 </ul>
 
 
