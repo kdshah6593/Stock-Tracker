@@ -8,4 +8,12 @@ class User < ApplicationRecord
     validates :last_name, presence: true, on: :create
     validates :email, presence: true, on: :create
     validates :email, uniqueness: true, on: :create
+
+    def portfolio_count
+        self.portfolios.size
+    end
+
+    def watchlist_count
+        self.watchlists.size
+    end
 end

@@ -5,8 +5,8 @@
     <li class="list-group-item"><span class="font-big">Last Name: </span><span class="alignright"><%= @user.last_name %></span></li>
     <li class="list-group-item"><span class="font-big">Email: </span><span class="alignright"><%= @user.email %></span></li>
 
-    <li class="list-group-item d-flex justify-content-between align-items-center"><span class="font-big">Number of Portfolios: </span><span class="badge badge-primary badge-pill"><%= @user.portfolios.size %></span></li>
-    <li class="list-group-item d-flex justify-content-between align-items-center"><span class="font-big">Number of Watchlists: </span><span class="badge badge-primary badge-pill"><%= @user.watchlists.size %></span></li>
+    <li class="list-group-item d-flex justify-content-between align-items-center"><span class="font-big">Number of Portfolios: </span><span class="badge badge-primary badge-pill"><%= @user.portfolio_count %></span></li>
+    <li class="list-group-item d-flex justify-content-between align-items-center"><span class="font-big">Number of Watchlists: </span><span class="badge badge-primary badge-pill"><%= @user.watchlist_count %></span></li>
 </ul>
 
 
