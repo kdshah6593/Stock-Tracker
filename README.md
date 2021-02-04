@@ -17,7 +17,7 @@ After cloning, access the directory `$ cd stock-tracker` (if nested under other 
 
 Run `$ bundle install` to add dependencies
 
-Run `$ rails db:migrate` to seed the database with the basic stock information 
+Run `$ rails db:migrate` and `$ rails db:seed` to create and seed the database with the basic stock information 
 
 Start the server `$ rails s` and open your browser to `localhost:3000`
 
