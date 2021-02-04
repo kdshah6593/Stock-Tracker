@@ -2,8 +2,20 @@
 
 <p><%= link_to "Add a New Portfolio", new_user_portfolio_path(@user) %></p>
 
-<% @portfolios.each do |portfolio| %>
-    <div>
-        <%= link_to portfolio.title, user_portfolio_path(@user, portfolio)  %>
+<div class="container">
+    <div class="card-deck mb-3 text-center">
+        <% @portfolios.each do |portfolio| %>
+            <div class="card mb-4 box-shadow">
+                <div class="class-header">
+                    <h4 class="my-0 font-weight-normal"><%=portfolio.title %></h4>
+                </div>
+                <div class="class-body">
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Number of Stocks: <%= portfolio.stocks.size %></li>
+                    </ul>
+                    <%= button_to "View", user_portfolio_path(@user, portfolio), method: :get, class: "btn btn-lg btn-block btn-outline-primary" %>
+                </div>
+            </div>
+        <% end %>
     </div>
-<% end %>
+</div>
