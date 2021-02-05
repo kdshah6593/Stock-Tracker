@@ -25,4 +25,12 @@ class User < ApplicationRecord
     def watchlist_count
         self.watchlists.size
     end
+
+    def total_investment
+        total = 0
+        self.stock_purchases.each do |purchase|
+            total += (purchase.amount * purchase.cost)
+        end
+        total.round(2)
+    end
 end
