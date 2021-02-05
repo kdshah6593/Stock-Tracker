@@ -1,4 +1,4 @@
-class passwordValidator < ActiveModel::Validator
+class PasswordValidator < ActiveModel::Validator
     def validate(record)
         if record.password.match(/[ ]/)
             record.errors.add :password, "Passwords cannot contain spaces"
