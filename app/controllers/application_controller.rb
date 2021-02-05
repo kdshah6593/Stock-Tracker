@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :verified_user
-  helper_method :logged_in?, :current_user, :verified_user
+  helper_method :logged_in?, :current_user, :verified_user, :correct_user
 
 #establishes current user using the session id after login request
   def current_user

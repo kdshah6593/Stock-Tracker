@@ -27,5 +27,8 @@ class StockPurchasesController < ApplicationController
 
     def portfolio_find
         @portfolio = Portfolio.find_by(id: params[:portfolio_id])
+        if @portfolio.user != current_user
+            redirect_to user_path(current_user)
+        end
     end
 end
