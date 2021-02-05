@@ -13,6 +13,9 @@
             <%= f.text_field :email, class: "form-control pr-5" %><br>
         </div>
 
+        <%= f.hidden_field :password, value: @user.password %>
+        <%= f.hidden_field :username, value: @user.username %>
+
         <br>
 
         <div class="d-flex justify-content-center">

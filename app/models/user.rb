@@ -10,12 +10,12 @@ class User < ApplicationRecord
     validates :username, presence: true
     validates :username, uniqueness: true, on: :create
     validates_with UsernameValidator
-    validates :password, length: { in: 6..20 }
+    validates :password, length: { in: 6..20 }, on: :create
     validates_with PasswordValidator, on: :create
-    validates :first_name, presence: true, on: :create
-    validates :last_name, presence: true, on: :create
-    validates :email, presence: true, on: :create
-    validates :email, uniqueness: true, on: :create
+    validates :first_name, presence: true
+    validates :last_name, presence: true
+    validates :email, presence: true
+    validates :email, uniqueness: true
     validates_with EmailValidator
 
     def portfolio_count
