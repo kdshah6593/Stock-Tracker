@@ -9,7 +9,7 @@ class Stock < ApplicationRecord
         if search.blank?
             Stock.all
         else
-            where('name LIKE ?', "%#{search}%")
+            where('name LIKE ? OR symbol LIKE ?', "%#{search}%", "%#{search}%")
         end
     end
 
