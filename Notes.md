@@ -158,4 +158,4 @@ User can keep track of their portfolios and create stock watchlists
 - Be able to filter/order Watchlist and Portfolio stocks
 
 ## Next Steps
-1. Regex Email Validator, Add Up Investments for a Total
+1. Add Up Investments for a Total
