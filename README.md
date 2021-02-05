@@ -15,11 +15,17 @@ To use this app, clone this repo: `$ git clone https://github.com/kdshah6593/Sto
 
 After cloning, access the directory `$ cd stock-tracker` (if nested under other directories be sure to include those in the path)
 
+Run `$ npm install --global yarn` to install Yarn if it's not on your system.
+
 Run `$ bundle install` to add dependencies
 
-Run `$ rails db:migrate` and `$ rails db:seed` to create and seed the database with the basic stock information 
+Run `$ rails db:migrate` and `$ rails db:seed` to create and seed the database with the basic stock information
+
+If you want to see some stock data, you will need an API token. Create a `.env` file and inside the file create a variable `STOCK_API_KEY` and set it equal to this publishable token `pk_ae03a9a1eff1404ea36816acf676a716`. Or you can get your own API token from [IEX Cloud](https://iexcloud.io).
 
 Start the server `$ rails s` and open your browser to `localhost:3000`
+
+NOTE: Github Login will not work in Development unless you create a `.env` file and provide a Github Key and Secret on your own
 
 ## Contributing
 Stretch goals in progress are listed in the [Notes.md](https://github.com/kdshah6593/Stock-Tracker/blob/main/Notes.md)
