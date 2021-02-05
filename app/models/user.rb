@@ -11,7 +11,7 @@ class User < ApplicationRecord
     validates :username, uniqueness: true, on: :create
     validates_with UsernameValidator
     validates :password, length: { in: 6..20 }
-    validates_with PasswordValidator
+    validates_with PasswordValidator, on: :create
     validates :first_name, presence: true, on: :create
     validates :last_name, presence: true, on: :create
     validates :email, presence: true, on: :create
