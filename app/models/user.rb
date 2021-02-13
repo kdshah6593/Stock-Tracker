@@ -33,4 +33,8 @@ class User < ApplicationRecord
         end
         total.round(2)
     end
+
+    def self.mostpurchases
+        joins(:stock_purchases).group(:id).order("COUNT(stock_purchases.id) DESC").first
+    end
 end

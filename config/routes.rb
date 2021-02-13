@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   #users
   resources :users, except: [:index, :new, :show]
   get '/signup', to: "users#new", as: "signup"
+  get '/mostpurchases', to: "users#mostpurchases"
 
   #portfolios & watchlists
   resources :users, only: [:show] do
