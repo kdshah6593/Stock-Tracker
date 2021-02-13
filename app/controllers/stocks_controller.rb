@@ -1,11 +1,11 @@
 class StocksController < ApplicationController
+    before_action :stock_find, only: [:show, :destroy]
 
     def index
         @stocks = Stock.search(params[:search])
     end
 
     def show 
-        stock_find
     end
 
     def new #this is form to add a stock to watchlist #possibly don't need since form built into watchlist show page
@@ -29,7 +29,6 @@ class StocksController < ApplicationController
 
     def destroy #removes stock from a watchlist
         @watchlist = Watchlist.find_by(id: params[:watchlist_id])
-        stock_find
         @watchlist.stocks.delete(@stock)
         redirect_to user_watchlist_path(current_user, @watchlist)
     end
