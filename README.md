@@ -8,7 +8,7 @@ Stock Tracker is a web application developed using Ruby on Rails incorporating C
 
 This app was developed using `ruby 2.6.1` and `Rails 6.1`
 
-<a href="https://iexcloud.io">Data provided by IEX Cloud</a>
+Data provided by [IEX Cloud](https://iexcloud.io) and [Alpha Vantage](https://www.alphavantage.co/)
 
 ## Installation
 
@@ -24,7 +24,7 @@ Run `$ bundle install` to add dependencies
 
 Run `$ rails db:migrate` and `$ rails db:seed` to create and seed the database with the basic stock information
 
-If you want to see some stock data, you will need 2 API tokens. One from [AlphaVantage](https://www.alphavantage.co/) and the other from [IEX Cloud](https://iexcloud.io). Create a `.env` file and inside the file create a variable `STOCK_API_KEY` and set it equal to the API key from AlphaVantage. Create another variable `IEX_API_KEY` and set it equal to the publishable token provided by IEX Cloud.
+If you want to see some stock data, you will need 2 API tokens. One from [Alpha Vantage](https://www.alphavantage.co/) and the other from [IEX Cloud](https://iexcloud.io). Create a `.env` file and inside the file create a variable `STOCK_API_KEY` and set it equal to the API key from AlphaVantage. Create another variable `IEX_API_KEY` and set it equal to the publishable token provided by IEX Cloud.
 
 Start the server `$ rails s` and open your browser to `localhost:3000`
 
