@@ -10,6 +10,8 @@ This app was developed using `ruby 2.6.1` and `Rails 6.1`
 
 Data provided by [IEX Cloud](https://iexcloud.io) and [Alpha Vantage](https://www.alphavantage.co/)
 
+**NOTE: This will not currently work because IEX Cloud has discontinued their free account. You will need to update to using Alpha Vantage for more limited stock information. See Stock.rb in Models directory**
+
 ## Installation
 
 To use this app, clone this repo: `$ git clone https://github.com/kdshah6593/Stock-Tracker`
